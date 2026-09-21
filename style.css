@@ -1,0 +1,907 @@
+/*=======================
+GENERAL STYLES
+========================*/
+* { 
+    box-sizing: border-box;
+}
+
+html, body { 
+    margin:0; 
+    padding:0;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+img {
+    max-width:100%; 
+    height:auto; 
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px; 
+}
+
+h2 {
+    padding-bottom: 10px; 
+    font-size:medium;
+} 
+
+a:link, a:visited {
+    color:none;
+    text-decoration: none;
+}
+
+main { 
+    padding-top:62px;
+}
+/*===================================
+MENU SECTION -- DEFAULT DEVICE:PHONE 
+====================================*/
+.contact-top { 
+   display:none;
+}
+
+header { 
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    padding:15px;
+    background-color: #069e2d;
+    position:fixed;
+    top:0;
+    margin:0;
+    width:100%;
+    z-index:999;
+    height:60px;
+}
+
+.burger-menu {
+    display: block;
+    font-size: 28px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
+.logo a { 
+    color:white;
+}
+
+nav {
+    display:none; 
+}
+
+.button-link { 
+    background: #44d62c;
+    color:white; 
+    cursor:pointer;
+    padding:5px;
+    border:#069e2d;
+    font-size:60%; 
+}
+
+/*=========================
+INDEX PAGE -- DEFAULT:PHONE
+===========================*/
+
+/*==============================================
+Setting the background image for the index page
+================================================*/
+.index-background {
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image:url(./images/about-us/leaves1.jpg);
+    background-size:100%; 
+}
+
+/*==============================
+Services offered images
+===============================*/
+.services-preview { 
+    display:flex;
+    flex-direction: column;
+    gap:10px;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.services-preview img { 
+    border-radius: 20%;
+    object-fit:cover;
+    height:200px; 
+    width:200px;
+    display: block;
+    margin: 0 auto;
+}
+
+/*=============================
+Why choose us section 
+==============================*/
+.choose-us { 
+    background-color:#04773b;
+    padding-top:80px;
+    padding:60px;
+}
+
+.choose-us p { 
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size:10px;
+    color:white;
+    text-align: justify;
+}    
+
+.choose-us h2{
+    color:black;
+    text-align: center;
+}
+
+.testimonial-area { 
+    background-size:30%; 
+    padding-top:40px;
+    padding-bottom: 40px;
+    text-align: center;
+    margin:0; 
+}
+
+.testimonial-area p {
+    background-color:white;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border:5px solid grey;
+    border-radius:20px;
+    display:flex;
+    align-items:center;
+    padding:25px;
+    box-sizing:border-box; 
+    font-size:10px;
+    color:#363636;
+    text-align: justify;
+    width: 75%;
+    margin:0 auto;
+}
+
+.testimonial-area h2{
+    color:white;
+}
+/*====================
+FOUNDER SECTION 
+======================*/
+.founder-image { 
+    border-radius:50%; 
+    object-fit:cover; 
+    width:200px; 
+    height:200px; 
+    padding:15px;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.founder-description {
+    display:flex;
+    flex-direction:column;
+    /*gap:10px;*/
+    padding-left: 20px;
+    /*padding-top:40px;*/
+    padding-bottom:40px;
+    background-color: white;
+    text-align: center;
+    /*height:max-content;*/
+}
+
+.founder-description p { 
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    word-break: normal;
+    text-align:justify;
+    line-height: 1.8;
+    box-sizing: border-box;
+    margin:0% auto;
+    width: 70%;
+}
+
+.founder-description h2 { 
+    padding-top:30px;
+}
+
+.header {
+    color:#069e2d;
+    padding:30px;
+    background-color: white; 
+}
+
+/*=========================
+FORM AND QUOTATION SECTION
+===========================*/
+.quote-box {
+    background-color: #04773b;
+    padding-top:40px;
+    padding-bottom:40px;
+    width:100%;
+    color:whitesmoke;
+    font-family:Arial, Helvetica, sans-serif;  
+}
+
+.quote-box label { 
+    font-size: smaller;
+}
+
+.quote-box h2{ 
+    color:#44d62c;
+    margin-left: 30px;
+}
+
+.quote-box form{
+    margin:30px;
+}
+
+.quote-box input { 
+    margin-bottom: 10px;
+}
+
+#email, #phone, #name, #surname { 
+    width:75%; 
+}
+
+#message { 
+    width:75%;
+    height:100px; 
+}
+
+.submit-button { 
+    background:#44d62c;
+    color:white;
+    cursor:pointer;
+    padding:9px;
+    border:#069e2d;  
+}
+
+/*=================
+CONTACT US SECTION
+===================*/
+.contact-section ul{
+    background-color: #06341c;
+    padding-top:20px;
+    padding-bottom:40px; 
+    list-style:none; 
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-y: hidden;
+    margin:0;
+}
+
+.contact-section h2 { 
+    color:whitesmoke;
+    margin: 0;
+}
+
+.contact-section span, .contact-section p { 
+    color:white; 
+}
+/*===========================
+SERVICES PAGE - DEFAULT: PHONE
+============================*/
+.services-background {
+    background-image:url(./images/display-and-layout/wild-shrub.jpg);
+    min-height:100%;
+    margin:0;
+    background-repeat: repeat-x;
+    background-size:200%;
+    overflow-x: hidden;
+}
+
+/*===================================
+Border/DIV surrounding the content
+====================================*/
+.services { 
+    display:flex;
+    flex-direction: column;
+    gap:10px;
+    padding-top:60px; 
+    padding-bottom:60px;
+}
+
+/*=========================================
+Border/Div surrounding individual services
+===========================================*/
+.landscaping-services, .paving-services, .cladding-services,
+ .gardening-services, .planting-services { 
+    display:inline; 
+    align-items:flex-start;
+    gap:10px;
+   
+}
+
+/*============================
+Image styles for each service
+=============================*/
+.outdoor-lighting, .entertainment-area, .paving, .cladding, 
+    .gardening5, .planting { 
+    border-radius:60%;
+    object-fit:cover;
+    width: 220px;
+    height:220px;
+    display: block;
+    margin: 0 auto;
+    transform: translateY(15%);
+}
+
+/*=======================================
+Text styles for each service description
+=========================================*/
+.text { 
+    flex:1;
+    background-color: #04773b;
+    padding:30px;
+    color: white;
+    margin: 0 auto;
+    width: 65%;
+}
+
+/*==============================
+PORTFOLIO PAGE - DEFAULT:PHONE 
+===============================*/
+/*================================================
+Border/div surrounding portfolio images and layout
+==================================================*/
+.portfolio-gallery { 
+    display:grid; 
+    grid-template-columns:1fr;
+    gap:12px;
+    padding-bottom: 40px;
+    padding-top:80px;
+    z-index: inherit;
+    overflow-x: hidden;
+    margin:0 auto; 
+    width:100%;
+}
+
+/*=============================
+Portfolio Images styles
+===============================*/
+.portfolio-gallery img { 
+    width:70%;
+    /*height:auto; */
+    margin: 0 auto; 
+    object-fit: cover;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    justify-content: center;
+}
+
+/*===========================
+BLOG PAGE - DEFAULT:PHONE
+=============================*/
+.blog-background { 
+    background-color:#0f5b34;
+}
+
+.blogs { 
+    display:flex;
+    flex-direction: column;
+    gap:10px;
+    padding-top:60px; 
+    padding-bottom:60px;
+}
+
+.blog1, .blog2, .blog3 { 
+    display:inline; 
+    align-items:flex-start;
+    gap:5px;
+   
+}
+
+.flowers-blog, .soil-blog, .compost-blog { 
+    border-radius:60%;
+    object-fit:cover;
+    width: 220px;
+    height:220px;
+    display: block;
+    margin: 0 auto;
+    transform: translateY(15%) ;
+}
+
+.blog-text { 
+    flex:1;
+    background-color: white;
+    padding:30px;
+    color: black;
+    margin: 0 auto;
+    width: 65%;
+}
+
+/*============================
+ABOUT US PAGE - DEFAULT:PHONE
+==============================*/
+/*============================
+Preventing/hiding overflow
+===============================*/
+.about-background { 
+    overflow-x: hidden;
+}
+
+/*==================================
+Border/Div surrounding ABOUT US text
+====================================*/
+.about-description { 
+   width:100%;
+   margin-bottom: 0;
+}
+
+/*================================
+About Us text styles -- heading2
+==================================*/
+.about-description h2 {
+    text-align: left;
+    padding-left: 40px;
+    color:#44d62c;
+    transform: translateY(70%);
+}
+
+/*==============================
+About US text styles -- heading3
+================================*/
+.about-description h3 { 
+    color:#0f5b34; 
+    padding-left:40px; 
+}
+
+/*================================
+About US text styles -- paragraph
+==================================*/
+.about-description p {
+    text-align: justify;
+    padding-left:40px; 
+    padding-right:30px;
+    /*padding-bottom:40px;*/ 
+    margin: 0 auto;
+}
+
+.additional-services li { 
+    position:relative;
+    padding-left: 30px;
+    font-size: smaller;
+}     
+
+.additional-services li::before { 
+   content:""; 
+   position: absolute;
+   left: 0;
+
+   width:20px; 
+   height:20px;
+
+   background-image: url('images/icons/check-icon1.svg');
+   background-size: contain;
+   background-repeat: no-repeat; 
+}
+
+.additional-services { 
+    display: flex;
+    align-items: center;
+    gap:10px
+    margin: top 0;
+}
+
+.tree { 
+    flex-shrink: 0;
+}
+
+.tree img { 
+   display:flex;
+   width: 700px;
+   max-width: 100%;
+   transform: translateX(-32%);
+}
+
+.additional-services ul { 
+    display:flex;
+    flex-direction: column;
+    gap:50px;
+    padding-bottom:60px;
+    list-style: none;
+    margin:0;
+    transform: translateY(-42%);
+}
+/*=============================
+OUR HISTORY SECTION 
+===============================*/
+.history-description { 
+    margin: 0 auto;
+    align-items: center;
+    box-sizing: border-box; 
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.history-description h2 {
+    color:#44d62c;
+    text-align: left;
+}
+
+.history-description p {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    text-align: justify;
+    font-size: 9px;
+    /*padding-left:30px; 
+    padding-right:30px;*/
+    width:70%; 
+    margin:0 auto;
+}
+
+.history-description img{  
+    align-items: center;
+    display: block;
+    object-fit:fill; 
+    padding:10px;
+    width:200px; 
+    height:200px;
+}
+
+/* ====================
+TABLET - 768px+
+========================*/
+@media(min-width: 768px) {
+    /*===========================
+    GENERAL SETTINGS
+    =============================*/
+    h2 {
+        padding-bottom: 10px; 
+        font-size:large;
+    } 
+    
+    main { 
+    padding-top:68px;
+    }
+
+   .burger-menu { 
+        display:none; 
+    }
+
+    .contact-top { 
+        background-color: white;
+        display:flex;
+        flex-direction: row;
+        list-style:none;
+        margin:0;
+        justify-content: end;
+        gap:40px;
+        font-size: 15px;
+        position:fixed;
+        top:0;
+        width:100%;
+        z-index:1000;
+        height:40px;
+    }
+
+    .contact-top img { 
+        padding-top: 10px;
+    }
+
+    .contact-top p { 
+        padding-right:60px;
+    }
+
+    .button-link { 
+        background: #44d62c;
+        color:white; 
+        cursor:pointer;
+        padding:9px;
+        border:#069e2d;
+        font-size: 100%;
+    }
+
+    header { 
+        top:40px;
+        position:fixed;
+        z-index:999;
+    }
+
+    nav { 
+        display:flex; 
+        gap:10px;
+    }
+
+    .menu-bar a {
+        color: white;
+    }
+
+    .menu-bar a:hover {
+        color:black; 
+    }
+
+    /*=========================
+    INDEX PAGE - DEFAULT:TABLET 
+    ===========================*/
+    /*==============================
+    Services offered images
+    ===============================*/
+    .index-background { 
+        background-repeat:no-repeat;
+    }
+    
+    .services-preview { 
+        flex-direction: row;
+        height:200px;
+        padding-top: 40px;
+        padding-bottom: 30px;
+    }
+
+    .services-preview img {
+        width:130px;
+        height:130px;
+    }
+
+    /*=====================
+    CHOOSE-US SECTION 
+    =======================*/
+    .choose-us p { 
+        font-size:14px;
+    }    
+
+    /*=====================
+    SERVICES PAGE 
+    ======================*/
+    /* Image styles for each service*/
+    .outdoor-lighting, .entertainment-area, .paving, .cladding, 
+    .gardening5, .planting { 
+        border-radius: 60%;
+        object-fit:cover;
+        width:250px;
+        height:250px;
+        transform: translateX(10%);
+    }
+
+    /*Border/Div surrounding individual services*/
+    .landscaping-services, .paving-services, .cladding-services,
+    .gardening-services, .planting-services { 
+        display:flex;
+    }
+
+    /*======================
+    ABOUT US PAGE
+    ========================*/
+    .tree img { 
+        display:flex;
+        width: 700px;
+        max-width: 100%;
+        transform: translateX(-22%);
+    }
+
+    .history-description img{  
+        border-radius:80%;
+        align-items: center;
+        display: block;
+        object-fit:fill; 
+        width:300px; 
+        height:300px;
+    }
+
+    .history-description p {
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        text-align: justify;
+        font-size: 14px;
+        /*padding-left:30px; 
+        padding-right:30px;*/
+        width:70%; 
+        margin:0 auto;
+    }
+    /*========================
+    PORTFOLIO PAGE 
+    ==========================*/
+    .portfolio-gallery {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 720px;
+        margin:auto;  
+    }
+
+}
+
+/*======================
+DESKTOP - 1024px+ 
+========================*/
+@media (min-width: 1024px) {
+    h2 {
+        padding-bottom: 10px; 
+        font-size:x-large;
+    } 
+
+    p{ 
+        font-size:large;
+    }
+
+    main { 
+        padding-top:64px;
+    }
+    /*==================
+    MENU AND CONTACT TOP 
+    ====================*/
+    .burger-menu { 
+        display:none; 
+    }
+
+    .contact-top { 
+        background-color: white;
+        display:flex;
+        flex-direction: row;
+        list-style:none;
+        margin:0;
+        justify-content:end;
+        gap:40px;
+        font-size: 15px;
+        position:fixed;
+        top:0;
+        width:100%;
+        z-index:1000;
+        height:40px;
+    }
+
+    .contact-top img { 
+        padding-top: 10px;
+    }
+
+    .contact-top p { 
+        padding-right:;
+    }
+
+    .button-link { 
+        background: #44d62c;
+        color:white; 
+        cursor:pointer;
+        padding:9px;
+        border:#069e2d;
+        font-size: 100%;
+    }
+
+    nav { 
+        display:flex; 
+        gap:10px; 
+    }
+
+    .menu-bar a {
+        color: white;
+    }
+
+    .menu-bar a:hover {
+        color:black; 
+    }
+
+    /*===========================
+    INDEX PAGE --DEFAULT: DESKTOP 
+    =============================*/
+    .index-background { 
+        background-repeat:no-repeat;
+    }
+    /*==============================
+    Services offered images
+    ===============================*/
+    .services-preview { 
+        flex-direction: row;
+        min-height: 200px;
+        height:auto;
+        padding-top: 50px;
+        padding-bottom: 30px;
+    }
+
+    .services-preview img {
+        width:220px;
+        height:220px;
+    }
+
+    .testimonial-area p {
+        background-color:white;
+        width:600px;
+        height:200px; 
+        font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        border:5px solid grey;
+        border-radius:20px;
+        display:flex;
+        align-items:center;
+        padding:40px;
+        box-sizing: border-box; 
+        font-size:14px;
+        color:#363636;
+        text-align: justify;
+        margin: 0 auto;
+    }
+
+    .founder-description {
+        display:flex;
+        flex-direction:row;
+        gap:10px;
+        padding-top:40px;
+        padding-bottom:40px;
+        background-color: white;
+        height:450px;
+    }
+
+    .founder-description p { 
+        word-break: normal;
+        text-align:left;
+        line-height: 1.8;
+        padding:30px;
+        font-size: 14px;
+    }
+
+    /*=====================
+    CHOOSE-US SECTION 
+    =======================*/
+    .choose-us p { 
+        font-size:14px;
+    }   
+
+    /*===================
+    QUOTATION/ENQUIRY FORM
+    =====================*/
+    .side-by-side {
+        display:flex;
+        gap:5px;
+    }
+
+    #email, #phone, #name, #surname { 
+        width:30%; 
+    }
+
+    #message { 
+        width:30%;
+        height:100px; 
+    }
+
+    .quote-box label { 
+        font-size:large;
+    }   
+
+    /*=====================
+    SERVICES PAGE 
+    ======================*/
+    /* Image styles for each service*/
+    .outdoor-lighting, .entertainment-area, .paving, .cladding, 
+    .gardening5, .planting { 
+        border-radius: 60%;
+        object-fit:cover;
+        width:350px;
+        height:350px;
+        transform: translateX(20%);
+    }
+
+    /*Border/Div surrounding individual services*/
+    .landscaping-services, .paving-services, .cladding-services,
+    .gardening-services, .planting-services { 
+        display:flex;
+        gap:25px;
+        margin-right:150px;
+    }
+
+    .text { 
+        flex:1;
+        background-color: #04773b;
+        padding:80px;
+        color: white;
+    }
+
+    /*=======================
+    ABOUT US PAGE
+    =========================*/
+    .tree img { 
+        display:flex;
+        width: 1000px;
+        max-width: 100%;
+        transform: translateX(-12%);
+    }
+
+    .history-description p {
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        text-align: justify;
+        font-size: 14px;
+        width:70%; 
+        margin:0 auto;
+    }
+    /*=================
+    PORTRAIT PAGE
+    ===================*/
+    .portfolio-gallery {
+        grid-template-columns: repeat(3, 1fr);
+        max-width:1200px;
+    }
+
+
+}

@@ -1,137 +1,191 @@
 <!DOCTYPE html> 
 <html> 
-    <head> 
-        <body> 
-            <header>
-                <a href="index.html">
-                    <h1> Foster Gardens</h1>
-                </a>
-                <a href="index.html">
-                    <h2>Home</h2>
-                </a>
-                <a href="about.html">
-                    <h2> About us</h2>
-                </a>
-                <a href="services.html">
-                    <h2>Services</h2>
-                </a>
-                <a href="blog.html">
-                    <h2>Blog and tips</h2>
-                </a>
-                <a href="portfolio.html">
-                    <h2>Portfolio</h2>
+    <head>
+        <link rel="stylesheet" href="style.css"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>    
+    <body class="about-background">
+        <!--Top icon section for phone and number for ease of access--> 
+        <div class="contact-top">
+            <img src="images/icons/mail.svg" width="20"> 
+            <p class="text1">gardens@foster.co.za</p>
+            <img src="images/icons/phone.svg" width="20">
+            <p class="text2">082 522 3875</p>
+        </div> 
+        <!--Beginning of the menu bar and its selections--> 
+           <header>
+                <div class="logo">
+                    <a href="index.html">Foster Gardens</a>
+                </div>
+                <button class="burger-menu" aria-label="Open-menu">
+                    ☰
+                </button>
+                <nav class="menu-bar">
+                        <a href="about.html">About us</a>
+                        <a href="services.html">Services</a>
+                        <a href="blog.html">Blog</a>
+                        <a href="portfolio.html">Portfolio</a>
+                    
+                </nav>
+                <a href="#contact-link">
+                        <button class="button-link">GET A QUOTE</button>
                 </a>
             </header>
-            <h2> About us</h2>
-                <h2>
-                Meet our founder
-                <img src="images/about-us/founder.jpg" width="255">
-            </h2>
-            <p>
-                John Foster (commmonly known 'Jo' by his beloved clients) developed a passion for gardening and landscaping 
-                by working in his grandparents garden. At the young age of 6 years old, Jo would look forward to seeing his 
-                grandparents, Betty and Jo Snr., so that he could learn more about the skills for nurturing a beautiful garden.
-                In 1993, he started a small gardening company called "Forever Gardening and Lawns", which is now better known as
-                Foster Gardens. With over 20 years of experience, Foster Gardens has expanded it's services offeringg to include 
-                professional-grade landscaping, design and gardening services into the wider Johannesburg and surrounding areas. 
-                Jo continues to be an active part of the organisation and happily nurturers it's staff and customers with as much
-                care as he does his gardens - with sincere and loving memory of his grandparents. 
-                <img src="images/about-us/grandparents.jpg" width="255">
-            </p>
-            <h2>Why Choose us</h2>
+        <main>
+            <div class="about-description">
+                <h2>ABOUT US</h2>
+                <h3>WE TRANSFORM YOUR LIVING SPACE</h3>
                 <p>
                     With a wide range of landscaping and gardening services offered by Foster Gardens, we ensure to make use of
                     the highest quality products, skills and machinery to help ensure that your garden remains your personal haven. 
                     The company offers services such as consultations, comprehensive landscape design, installation and garden 
                     maintenance. Additionally, Foster Gardens offers personalised plant consultations and treatment plans for its 
-                    customers. 
+                    customers. Additional services that we provide include:
                 </p>
-                <h3>Our Vision and Mission</h3>
+            </div>
+            <div class="additional-services">
+                <ul>
+                    <li>
+                        Exterior lighting
+                    </li>
+                    <li>
+                        Irrigation Systems
+                    </li>
+                    <li> 
+                        Exterior Lighting
+                    </li>
+                    <li>
+                        Pool design
+                    </li>
+                </ul>
+                <div class="tree">
+                    <img src="images/display-and-layout/potted-shrub.png" width="700">
+                </div>
+            </div>
+            <div class="choose-us">
+                <h2>WHY CHOOSE US</h2>
+                    <p>
+                        With a wide range of landscaping and gardening services offered by Foster Gardens, we ensure to make use of
+                        the highest quality products, skills and machinery to help ensure that your garden remains your personal haven. 
+                        The company offers services such as consultations, comprehensive landscape design, installation and garden 
+                        maintenance. Additionally, Foster Gardens offers personalised plant consultations and treatment plans for its 
+                        customers. 
+                    </p>
+                </h3>    
+            </div>
+            <div class="history-description">
+                <h2>OUR HISTORY</h2>
                 <p>
-                    To be your partner in lasting memories.
+                    Our founder John Foster developed a passion for gardening and landscaping 
+                    by working in his grandparents garden. At the young age of 6 years old, Jo would look forward to seeing his 
+                    grandparents, Betty and Jo Snr., so that he could learn more about the skills for nurturing a beautiful garden.
+                    In 1993, he started a small gardening company called "Forever Gardening and Lawns", which is now better known as
+                    Foster Gardens. With over 20 years of experience, Foster Gardens has expanded it's services offeringg to include 
+                    professional-grade landscaping, design and gardening services into the wider Johannesburg and surrounding areas. 
+                    Jo continues to be an active part of the organisation and happily nurturers it's staff and customers with as much
+                    care as he does his gardens - with sincere and loving memory of his grandparents. 
                 </p>
-                <p>
-                    We want to help people recognise the value of serene outdoor space. We aim to tend to your garden, so you can 
-                    tend to each other. 
-                </p>
+                <img src="images/about-us/grandparents.jpg" width="255">
+            </div>
+              
             <!--This form is essential on each page to enforce and encourage customer response to action calls -->   
-            <h2>GET A FREE QUOTE</h2>
-            <form>
-                <label for="name">First Name</label>
-                <br>
-                <input type="text" id="name" required>
-                <br>
-                <label for="surname">Surname</label>
-                <br>
-                <input type="text" id="surname" required>
-                <br>
-                <label for="email">Email Address </label>
-                <br>
-                <input type="text" id="email" required>
-                <br>
-                <label for="phone">Phone</label>
-                <br>
-                <input type="text" id="phone" required>
-                <br>
-                <h6>Select your preferred services:</h6>
-                <label>
+            <div class="quote-box" id="contact-link">
+                <h2>GET A FREE QUOTE</h2>
+                <!--This form is essential on each page to enforce and encourage customer response to action calls -->
+                <form>
+                    <div class="side-by-side">
+                        <label for="name">First Name</label>
+                        <br>
+                        <input type="text" id="name" required>
+                        <br>
+                        <label for="surname">Last name</label>
+                        <br>
+                        <input type="text" id="surname" required>
+                    </div>
+                    <br>
+                    <label for="email">Email Address </label>
+                    <br>
+                    <input type="text" id="email" required>
+                    <br>
+                    <label for="phone">Phone</label>
+                    <br>
+                    <input type="text" id="phone" required>
+                    <br>
+                    <h5>Select your preferred services:</h5>
+                    <label>
                     <input type="checkbox" value="landscaping">
                     Landscaping
-                </label>
-                <br>
-                 <label>
-                    <input type="checkbox" value="landscaping">
-                    Gardening services
+                    </label>
                     <br>
-                        <label> 
-                            <input type="checkbox">
-                            Weekly
+                    <label>
+                        <input type="checkbox" value="landscaping">
+                        Gardening services
+                        <br>
+                            <label> 
+                                <input type="checkbox">
+                                Weekly
+                                <br>
+                                <input type="checkbox">
+                                Monthly
+                            </label>
+                    </label>
+                    <br>
+                    <label>
+                        <input type="checkbox">
+                        Composting and garden-waste management
+                    </label>
+                    <br>
+                    <label>
+                        <input type="checkbox">
+                        Planting, soil and pest control services 
+                    </label>
+                    <br> 
+                    <label>
+                        <input type="checkbox">
+                        Irrigation and water management services 
+                    </label>
+                    <br>
+                    <label>
+                        <input type="checkbox">
+                        Paving and garden lighting
+                    </label>
+                     <br>
+                    <h5>Message:</h5>
+                    <input type="text" id="message" required>
+                    <br>
+                    <button class="submit-button">Submit</button>
+                </form>
+            </div>
+             <div class="contact-section">
+                <ul>
+                    <li>
+                        <h2>CONTACT US</h2>
+                    </li>
+                    <li>
+                        <p>
+                            <img src="images/icons/phone.svg" width="28">
+                            082 553 8090
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <img src="images/icons/mail.svg" width="28">
+                            john@fostergardens.co.za
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <img src="images/icons/map-pin.svg" width="28">
+                             28 Pretoria Rd
                             <br>
-                            <input type="checkbox">
-                            Monthly
-                        </label>
-                </label>
-                <br>
-                <label>
-                    <input type="checkbox">
-                    Composting and garden-waste management
-                </label>
-                <br>
-                <label>
-                    <input type="checkbox">
-                    Planting, soil and pest control services 
-                </label>
-                <br> 
-                <label>
-                    <input type="checkbox">
-                    Irrigation and water management services 
-                </label>
-                <br>
-                <label>
-                    <input type="checkbox">
-                    Paving and garden lighting
-                </label>
-            </form> 
-             <footer>
-                <h2>Contact Us</h2>
-                <p>
-                    <img src="images/icons/phone.svg" width="28">
-                    082 553 8090
-                </p>
-                <p>
-                    <img src="images/icons/mail.svg" width="28">
-                    john@fostergardens.co.za
-                </p>
-                <p>
-                    <img src="images/icons/map-pin.svg" width="28">
-                    28 Pretoria Rd
-                    <br>
-                    Highlands North
-                    <br>
-                    Johannesburg 2192
-                    <br>
-                </p>
-            </footer>   
-        </body>
-    </head>
+                            Highlands North
+                            <br>
+                            Johannesburg 2192
+                            <br>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </main>        
+    </body>
 </html>

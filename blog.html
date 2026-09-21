@@ -1,118 +1,251 @@
 <!DOCTYPE html> 
 <html> 
-    <head> 
-        <body> 
-            <header>
-                 <a href="index.html">
-                    <h1> Foster Gardens</h1>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>    
+    <body class="blog-background">
+        <div class="contact-top">
+            <img src="images/icons/mail.svg" width="20"> 
+            <p class="text1">gardens@foster.co.za</p>
+            <img src="images/icons/phone.svg" width="20">
+            <p class="text2">082 522 3875</p>
+        </div> 
+        <header>
+            <div class="logo">
+                <a href="index.html">Foster Gardens</a>
+            </div>
+            <button class="burger-menu" aria-label="Open-menu">
+                ☰
+            </button>
+            <nav class="menu-bar">
+                <a href="about.html">About us</a>
+                <a href="services.html">Services</a>
+                <a href="blog.html">Blog</a>
+                <a href="portfolio.html">Portfolio</a>  
+            </nav>
+                <a href="#contact-link">
+                    <button class="button-link">GET A QUOTE</button>
                 </a>
-                <a href="index.html">
-                    <h2>Home</h2>
-                </a>
-                <a href="about.html">
-                    <h2> About us</h2>
-                </a>
-                <a href="services.html">
-                    <h2>Services</h2>
-                </a>
-                <a href="blog.html">
-                    <h2>Blog and tips</h2>
-                </a>
-                <a href="portfolio.html">
-                    <h2>Portfolio</h2>
-                </a>
-            </header>
+        </header>
+        <main> 
         <!-- Blog contents added with dynamic CSS features-->
-            <p>
-                Keeping flowers healthy 
-                <img src="images/blog/keeping-flowers.jpg" width="255">
-            </p>
-            <p> 
-                Your soil-guide 
-                <img src="images/blog/soil-types.jpg" width="255">
-            </p>
-            <p>
-                Compose your garden with the right Composting
-                <img src="images/blog/compost-and-soil.jpg" width="255">
-            </p>
+        <div class="blogs">
+            <div class="blog1">
+                <img class="flowers-blog" src="images/blog/keeping-flowers.jpg" width="255">
+                <div class="blog-text">
+                    <h2>
+                        Keeping flowers healthy 
+                    </h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse 
+                        quis felis ex. Fusce at euismod mi, sed euismod libero. Sed pellentesque 
+                        lectus vitae mollis sodales. Nullam at tristique felis, auctor egestas nulla. 
+                         pulvinar lectus justo, eget congue lectus imperdiet nec. Vestibulum a pulvinar 
+                        mi, a egestas urna. Fusce id magna non orci fermentum blandit sit amet vel 
+                        augue. 
+                    <br>
+                        Pellentesque habitant morbi tristique senectus et netus et malesuada fames
+                        ac turpis egestas. Etiam in justo congue lorem molestie feugiat. Sed vulputate, sem 
+                        at fringilla fringilla, nisl justo convallis velit, in molestie nisi metus sed ex. 
+                        Nullam laoreet ut neque tristique malesuada. Aenean ut dui eget diam dignissim mollis. 
+                        Fusce mattis nisl nec blandit sodales. Mauris ullamcorper elementum posuere. Morbi 
+                        vulputate velit nec libero aliquam finibus.
+                    <br>
+                        Phasellus ex mauris, sagittis eget tempus ac, malesuada ac justo. Praesent consectetur 
+                        ex sed dictum consectetur. Vestibulum quam nibh, porta et hendrerit vel, sollicitudin 
+                        in leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin non tincidunt nisi. 
+                        Vestibulum eu elit enim. Etiam imperdiet placerat mattis. 
+                        Curabitur tempor aliquet hendrerit. Vestibulum eu elit facilisis nisi luctus vulputate 
+                        fermentum ac ex. Duis consequat lacinia velit, nec molestie diam tristique in. Nunc lacinia 
+                        congue pharetra. Sed viverra tortor nec sollicitudin accumsan. Nulla placerat finibus tellus, 
+                        quis sollicitudin sapien imperdiet non. Maecenas nec nisi non justo vestibulum sagittis.
+                        <br>
+                        Praesent ultrices mauris risus, sed bibendum nulla suscipit eget. Vivamus at ipsum sed mauris 
+                        condimentum suscipit. Fusce ut risus nibh. Donec feugiat ut odio id sodales. Suspendisse vehicula 
+                        est sed risus porta eleifend. Fusce sagittis tortor nulla, id consequat est hendrerit a. 
+                        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.    
+                    </p>
+                </div>
+            </div>
+        </div>              
+
+        <div class="blogs">
+            <div class="blog2">
+                <img class="soil-blog" src="images/blog/soil-types.jpg" width="255">
+                <div class="blog-text">
+                    <h2>
+                        The Ultimate Guide to healthy soil
+                    </h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse 
+                        quis felis ex. Fusce at euismod mi, sed euismod libero. Sed pellentesque 
+                        lectus vitae mollis sodales. Nullam at tristique felis, auctor egestas nulla. 
+                         pulvinar lectus justo, eget congue lectus imperdiet nec. Vestibulum a pulvinar 
+                        mi, a egestas urna. Fusce id magna non orci fermentum blandit sit amet vel 
+                        augue. 
+                    <br>
+                        Pellentesque habitant morbi tristique senectus et netus et malesuada fames
+                        ac turpis egestas. Etiam in justo congue lorem molestie feugiat. Sed vulputate, sem 
+                        at fringilla fringilla, nisl justo convallis velit, in molestie nisi metus sed ex. 
+                        Nullam laoreet ut neque tristique malesuada. Aenean ut dui eget diam dignissim mollis. 
+                        Fusce mattis nisl nec blandit sodales. Mauris ullamcorper elementum posuere. Morbi 
+                        vulputate velit nec libero aliquam finibus.
+                    <br>
+                        Phasellus ex mauris, sagittis eget tempus ac, malesuada ac justo. Praesent consectetur 
+                        ex sed dictum consectetur. Vestibulum quam nibh, porta et hendrerit vel, sollicitudin 
+                        in leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin non tincidunt nisi. 
+                        Vestibulum eu elit enim. Etiam imperdiet placerat mattis. 
+                        Curabitur tempor aliquet hendrerit. Vestibulum eu elit facilisis nisi luctus vulputate 
+                        fermentum ac ex. Duis consequat lacinia velit, nec molestie diam tristique in. Nunc lacinia 
+                        congue pharetra. Sed viverra tortor nec sollicitudin accumsan. Nulla placerat finibus tellus, 
+                        quis sollicitudin sapien imperdiet non. Maecenas nec nisi non justo vestibulum sagittis.
+                        <br>
+                        Praesent ultrices mauris risus, sed bibendum nulla suscipit eget. Vivamus at ipsum sed mauris 
+                        condimentum suscipit. Fusce ut risus nibh. Donec feugiat ut odio id sodales. Suspendisse vehicula 
+                        est sed risus porta eleifend. Fusce sagittis tortor nulla, id consequat est hendrerit a. 
+                        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.    
+                    </p>
+                </div>
+            </div>
+        </div>  
+         <div class="blogs">
+            <div class="blog3">
+                <img class="compost-blog" src="images/blog/compost-and-soil.jpg" width="255">
+                <div class="blog-text">
+                    <h2>
+                        Compose your garden with the right Composting
+                    </h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse 
+                        quis felis ex. Fusce at euismod mi, sed euismod libero. Sed pellentesque 
+                        lectus vitae mollis sodales. Nullam at tristique felis, auctor egestas nulla. 
+                         pulvinar lectus justo, eget congue lectus imperdiet nec. Vestibulum a pulvinar 
+                        mi, a egestas urna. Fusce id magna non orci fermentum blandit sit amet vel 
+                        augue. 
+                    <br>
+                        Pellentesque habitant morbi tristique senectus et netus et malesuada fames
+                        ac turpis egestas. Etiam in justo congue lorem molestie feugiat. Sed vulputate, sem 
+                        at fringilla fringilla, nisl justo convallis velit, in molestie nisi metus sed ex. 
+                        Nullam laoreet ut neque tristique malesuada. Aenean ut dui eget diam dignissim mollis. 
+                        Fusce mattis nisl nec blandit sodales. Mauris ullamcorper elementum posuere. Morbi 
+                        vulputate velit nec libero aliquam finibus.
+                    <br>
+                        Phasellus ex mauris, sagittis eget tempus ac, malesuada ac justo. Praesent consectetur 
+                        ex sed dictum consectetur. Vestibulum quam nibh, porta et hendrerit vel, sollicitudin 
+                        in leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin non tincidunt nisi. 
+                        Vestibulum eu elit enim. Etiam imperdiet placerat mattis. 
+                        Curabitur tempor aliquet hendrerit. Vestibulum eu elit facilisis nisi luctus vulputate 
+                        fermentum ac ex. Duis consequat lacinia velit, nec molestie diam tristique in. Nunc lacinia 
+                        congue pharetra. Sed viverra tortor nec sollicitudin accumsan. Nulla placerat finibus tellus, 
+                        quis sollicitudin sapien imperdiet non. Maecenas nec nisi non justo vestibulum sagittis.
+                        <br>
+                        Praesent ultrices mauris risus, sed bibendum nulla suscipit eget. Vivamus at ipsum sed mauris 
+                        condimentum suscipit. Fusce ut risus nibh. Donec feugiat ut odio id sodales. Suspendisse vehicula 
+                        est sed risus porta eleifend. Fusce sagittis tortor nulla, id consequat est hendrerit a. 
+                        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.    
+                    </p>
+                </div>
+            </div>
+        </div> 
         <!--This form is essential on each page to enforce and encourage customer response to action calls -->
-            <h2>GET A FREE QUOTE</h2>
-            <form>
-                <label for="name">First Name</label>
-                <br>
-                <input type="text" id="name" required>
-                <br>
-                <label for="surname">Surname</label>
-                <br>
-                <input type="text" id="surname" required>
-                <br>
-                <label for="email">Email Address </label>
-                <br>
-                <input type="text" id="email" required>
-                <br>
-                <label for="phone">Phone</label>
-                <br>
-                <input type="text" id="phone" required>
-                <br>
-                <h6>Select your preferred services:</h6>
-                <label>
+            <div class="quote-box" id="contact-link">
+                <h2>GET A FREE QUOTE</h2>
+                <!--This form is essential on each page to enforce and encourage customer response to action calls -->
+                <form>
+                    <div class="side-by-side">
+                        <label for="name">First Name</label>
+                        <br>
+                        <input type="text" id="name" required>
+                        <br>
+                        <label for="surname">Last name</label>
+                        <br>
+                        <input type="text" id="surname" required>
+                    </div>
+                    <br>
+                    <label for="email">Email Address </label>
+                    <br>
+                    <input type="text" id="email" required>
+                    <br>
+                    <label for="phone">Phone</label>
+                    <br>
+                    <input type="text" id="phone" required>
+                    <br>
+                    <h5>Select your preferred services:</h5>
+                    <label>
                     <input type="checkbox" value="landscaping">
                     Landscaping
-                </label>
-                <br>
-                 <label>
-                    <input type="checkbox" value="landscaping">
-                    Gardening services
+                    </label>
                     <br>
-                        <label> 
-                            <input type="checkbox">
-                            Weekly
+                    <label>
+                        <input type="checkbox" value="landscaping">
+                        Gardening services
+                        <br>
+                            <label> 
+                                <input type="checkbox">
+                                Weekly
+                                <br>
+                                <input type="checkbox">
+                                Monthly
+                            </label>
+                    </label>
+                    <br>
+                    <label>
+                        <input type="checkbox">
+                        Composting and garden-waste management
+                    </label>
+                    <br>
+                    <label>
+                        <input type="checkbox">
+                        Planting, soil and pest control services 
+                    </label>
+                    <br> 
+                    <label>
+                        <input type="checkbox">
+                        Irrigation and water management services 
+                    </label>
+                    <br>
+                    <label>
+                        <input type="checkbox">
+                        Paving and garden lighting
+                    </label>
+                     <br>
+                    <h5>Message:</h5>
+                    <input type="text" id="message" required>
+                    <br>
+                    <button class="submit-button">Submit</button>
+                </form>
+            </div>
+             <div class="contact-section">
+                  <ul>
+                    <li>
+                        <h2>CONTACT US</h2>
+                    </li>
+                    <li>
+                        <p>
+                            <img src="images/icons/phone.svg" width="28">
+                            082 553 8090
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <img src="images/icons/mail.svg" width="28">
+                            john@fostergardens.co.za
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <img src="images/icons/map-pin.svg" width="28">
+                             28 Pretoria Rd
                             <br>
-                            <input type="checkbox">
-                            Monthly
-                        </label>
-                </label>
-                <br>
-                <label>
-                    <input type="checkbox">
-                    Composting and garden-waste management
-                </label>
-                <br>
-                <label>
-                    <input type="checkbox">
-                    Planting, soil and pest control services 
-                </label>
-                <br> 
-                <label>
-                    <input type="checkbox">
-                    Irrigation and water management services 
-                </label>
-                <br>
-                <label>
-                    <input type="checkbox">
-                    Paving and garden lighting
-                </label>
-            </form>
-             <footer>
-                <h2>Contact Us</h2>
-                <p>
-                    <img src="images/icons/phone.svg" width="28">
-                    082 553 8090
-                </p>
-                <p>
-                    <img src="images/icons/mail.svg" width="28">
-                    john@fostergardens.co.za
-                </p>
-                <p>
-                    <img src="images/icons/map-pin.svg" width="28">
-                    28 Pretoria Rd
-                    <br>
-                    Highlands North
-                    <br>
-                    Johannesburg 2192
-                    <br>
-                </p>
-            </footer>
-        </body>
-    </head>
+                            Highlands North
+                            <br>
+                            Johannesburg 2192
+                            <br>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </main>
+    </body>
 </html>

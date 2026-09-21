@@ -1,151 +1,191 @@
 <!DOCTYPE html> 
 <html> 
-    <head> 
-        <body> 
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>    
+    <!--Top icon section for phone and number for ease of access-->   
+    <body class="services-background"> 
+        <div class="contact-top">
+            <img src="images/icons/mail.svg" width="20"> 
+            <p class="text1">gardens@foster.co.za</p>
+            <img src="images/icons/phone.svg" width="20">
+            <p class="text2">082 522 3875</p>
+        </div> 
+            <!--Beginning of the menu bar and its selections--> 
+        <main>
             <header>
-                <a href="index.html">
-                    <h1> Foster Gardens</h1>
+            <div class="logo">
+                    <a href="index.html">Foster Gardens</a>
+                </div>
+                <button class="burger-menu" aria-label="Open-menu">
+                    ☰
+                </button>
+                <nav class="menu-bar">
+                        <a href="about.html">About us</a>
+                        <a href="services.html">Services</a>
+                        <a href="blog.html">Blog</a>
+                        <a href="portfolio.html">Portfolio</a>
+                    
+                </nav>
+                <a href="#contact-link">
+                        <button class="button-link">GET A QUOTE</button>
                 </a>
-                <a href="index.html">
-                    <h2>Home</h2>
-                </a>
-                <a href="about.html">
-                    <h2> About us</h2>
-                </a>
-                <a href="blog.html">
-                    <h2>Blog and tips</h2>
-                </a>
-                <a href="portfolio.html">
-                    <h2>Portfolio</h2>
-                </a>
-            </header>
-            <h2>
-                Landscaping Services
-                <img src="images/services/outdoor-lighting.jpg" width="255">
-                <img src="images/services/entertainment-areas.jpg" width="255">
-            </h2>
-            <p>
-                Our landscaping services will give your property the exquisite and polished look it needs to truly stand out.
-                We work with you to help transform your yard space into a tranquil, scenic and inviting escapes for you and your
-                loved ones. We also ensure our designs are functionally sound to provide privacy, wind protection and environmental
-                sustainability.
-            </p>
-            <h2>Paving and Garden Lighting
-                <img src="images/services/paving.jpg.jpg" width="255">
-            </h2>
-            <p>
-                Paving is an essential yard design feature which provides a clear walkway that enhances the lines between the lawn 
-                and flower beds which gives your yard its distinguished shape and form. This allows the garden space to maintain a 
-                neat appearance. while garden lighting provides a warm and inviting feel to social evenings by luminating your garden
-                space and allowing you to bask in its beauty at any time of the day. 
-            </p>
-            <h2>Cladding
-                <img src="images/services/cladding.jpg" width="255">
-            </h2>
-            <p>
-                Cladding is an essential design piece for ensuring that your yard space stands out while also preserving its longevity. 
-                With our expertise, we ensure that we find the most suitable cladding solutions that compliment your yard space while 
-                giving you peace of mind. 
-            </p>
-            <h2>Gardening services
-                <img src="images/services/hedge-trimming.jpg" width="255">
-                <img src="images/services/leaf-clearing.jpg" width="255">
-                <img src="images/services/pruning.jpg" width="255"> 
-                <img src="images/services/lawn-mowing.jpg" width="255">
-                <img src="images/services/tree-felling.jpg" width="255">
-            </h2>
-            <p>
-                A yard full of built-up leaves, damaged tree branches, overgrown grass and excessive debris is a homeowners nightmare. 
-                That's why our services offer you the necessary services to keep your gardening space in prestine condition. With our 
-                weekly and monthly service option, and our team of experienced gardeners, we'll take care of all our garden needs while 
-                you relax and enjoy the transformation of quiet space. 
-            </p>
-            <h2>
-                Planting, Soil and Pest Control
-                <img src="images/services/planting.jpg">
-            </h2>
-            <p>
-                We know that your flower garden is your heart's gold. With our expert florists skills, we'll be sure to keep your plants 
-                healthy and growing while ensuring to keep a sharp eye on any pests. 
-            </p>
+            </header> 
+            <div class="services">
+                <div class="landscaping-services">
+                    <img class="entertainment-area" src="images/services/entertainment-areas.jpg" width="255">
+                    <div class="text">
+                        <h2>Landscaping Services</h2>
+                        <p>
+                        Our landscaping services will give your property the exquisite and polished look it needs to truly stand out.
+                        We work with you to help transform your yard space into a tranquil, scenic and inviting escapes for you and your
+                        loved ones. We also ensure our designs are functionally sound to provide privacy, wind protection and environmental
+                        sustainability.
+                        </p>
+                    </div>
+                </div>
+                <div class="paving-services">
+                    <img class="paving" src="images/services/paving.jpg.jpg" width="255">
+                    <div class="text">
+                        <h2>Paving and Garden Lighting</h2>
+                        <p>
+                            Paving is an essential yard design feature which provides a clear walkway that enhances the lines between the lawn 
+                            and flower beds which gives your yard its distinguished shape and form. This allows the garden space to maintain a 
+                            neat appearance. while garden lighting provides a warm and inviting feel to social evenings by luminating your garden
+                            space and allowing you to bask in its beauty at any time of the day. 
+                        </p>
+                    </div>
+                </div>
+                <div class="cladding-services">
+                    <img class="cladding" src="images/services/cladding.jpg" width="255">
+                    <div class="text">
+                        <h2>Cladding</h2>
+                        <p>
+                            Cladding is an essential design piece for ensuring that your yard space stands out while also preserving its longevity. 
+                            With our expertise, we ensure that we find the most suitable cladding solutions that compliment your yard space while 
+                            giving you peace of mind. 
+                        </p>
+                    </div> 
+                </div>
+                <div class="gardening-services">
+                    <img class="gardening5" src="images/services/tree-felling.jpg" width="255">
+                    <div class="text">
+                        <h2>Gardening services</h2>
+                        <p>
+                            A yard full of built-up leaves, damaged tree branches, overgrown grass and excessive debris is a homeowners nightmare. 
+                            That's why our services offer you the necessary services to keep your gardening space in prestine condition. With our 
+                            weekly and monthly service option, and our team of experienced gardeners, we'll take care of all our garden needs while 
+                            you relax and enjoy the transformation of quiet space. 
+                        </p>
+                    </div>
+                </div>
+                <div class="planting-services">
+                    <img class="planting" src="images/services/planting.jpg">
+                    <div class="text">
+                        <h2>Planting, Soil and Pest Control</h2>
+                        <p>
+                            We know that your flower garden is your heart's gold. With our expert florists skills, we'll be sure to keep your plants 
+                            healthy and growing while ensuring to keep a sharp eye on any pests. 
+                        </p>
+                    </div>
+                </div>
+            </div>
             <!--This form is essential on each page to enforce and encourage customer response to action calls -->
-            <h2>GET A FREE QUOTE FROM US</h2>
-            <form>
-                <label for="name">First Name</label>
-                <br>
-                <input type="text" id="name" required>
-                <br>
-                <label for="surname">Surname</label>
-                <br>
-                <input type="text" id="surname" required>
-                <br>
-                <label for="email">Email Address </label>
-                <br>
-                <input type="text" id="email" required>
-                <br>
-                <label for="phone">Phone</label>
-                <br>
-                <input type="text" id="phone" required>
-                <br>
-                <h6>Select your preferred services:</h6>
-                <label>
+            <div class="quote-box" id="contact-link">
+                <h2>GET A FREE QUOTE</h2>
+                <!--This form is essential on each page to enforce and encourage customer response to action calls -->
+                <form>
+                    <div class="side-by-side">
+                        <label for="name">First Name</label>
+                        <br>
+                        <input type="text" id="name" required>
+                        <br>
+                        <label for="surname">Last name</label>
+                        <br>
+                        <input type="text" id="surname" required>
+                    </div>
+                    <br>
+                    <label for="email">Email Address </label>
+                    <br>
+                    <input type="text" id="email" required>
+                    <br>
+                    <label for="phone">Phone</label>
+                    <br>
+                    <input type="text" id="phone" required>
+                    <br>
+                    <h5>Select your preferred services:</h5>
+                    <label>
                     <input type="checkbox" value="landscaping">
                     Landscaping
-                </label>
-                <br>
-                 <label>
-                    <input type="checkbox" value="landscaping">
-                    Gardening services
+                    </label>
                     <br>
-                        <label> 
-                            <input type="checkbox">
-                            Weekly
-                            <br>
-                            <input type="checkbox">
-                            Monthly
-                        </label>
-                </label>
-                <br>
-                <label>
-                    <input type="checkbox">
-                    Composting and garden-waste management
-                </label>
-                <br>
-                <label>
-                    <input type="checkbox">
-                    Planting, soil and pest control services 
-                </label>
-                <br> 
-                <label>
-                    <input type="checkbox">
-                    Irrigation and water management services 
-                </label>
-                <br>
-                <label>
-                    <input type="checkbox">
-                    Paving and garden lighting
-                </label>
-            </form>
-             <footer>
-                <h2>Contact Us</h2>
-                <p>
-                    <img src="images/icons/phone.svg" width="28">
-                    082 553 8090
-                </p>
-                <p>
-                    <img src="images/icons/mail.svg" width="28">
-                    john@fostergardens.co.za
-                </p>
-                <p>
-                    <img src="images/icons/map-pin.svg" width="28">
-                    28 Pretoria Rd
+                    <label>
+                        <input type="checkbox" value="landscaping">
+                        Gardening services
+                        <br>
+                            <label> 
+                                <input type="checkbox">
+                                Weekly
+                                <br>
+                                <input type="checkbox">
+                                Monthly
+                            </label>
+                    </label>
                     <br>
-                    Highlands North
+                    <label>
+                        <input type="checkbox">
+                        Composting and garden-waste management
+                    </label>
                     <br>
-                    Johannesburg 2192
+                    <label>
+                        <input type="checkbox">
+                        Planting, soil and pest control services 
+                    </label>
+                    <br> 
+                    <label>
+                        <input type="checkbox">
+                        Irrigation and water management services 
+                    </label>
                     <br>
-                </p>
-            </footer>
-        </body>
-    </head>
+                    <label>
+                        <input type="checkbox">
+                        Paving and garden lighting
+                    </label>
+                     <br>
+                    <h5>Message:</h5>
+                    <input type="text" id="message" required>
+                    <br>
+                    <button class="submit-button">Submit</button>
+                </form>
+            </div>
+            <div class="contact-section">
+                <ul>
+                    <li>
+                        <h2>CONTACT US</h2>
+                    </li>
+                    <li>
+                        <p>
+                            <img src="images/icons/phone.svg" width="28">
+                            082 522 3875
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <img src="images/icons/mail.svg" width="28">
+                            gardens@foster.co.za
+                        </p>
+                    </li>
+                    <li>
+                        <img src="images/icons/map-pin.svg" width="28">
+                        <span>28 Pretoria Road</span>
+                        <br>
+                        <span>Highlands North</span>
+                        <br>
+                        <span>Johannesburg 2192</span>
+                    </li>
+                </ul>
+            </div>
+            </main>
+    </body>
 </html>

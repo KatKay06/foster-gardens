@@ -1,56 +1,90 @@
 <!DOCTYPE html> 
 <html> 
-    <head> 
-        <body> 
-             <header>
-                <a href="index.html">
-                    <h1> Foster Gardens</h1>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>       
+    <body>
+        <!--Top icon section for phone and number for ease of access--> 
+        <div class="contact-top">
+            <img src="images/icons/mail.svg" width="20"> 
+            <p class="text1">gardens@foster.co.za</p>
+            <img src="images/icons/phone.svg" width="20">
+            <p class="text2">082 522 3875</p>
+        </div> 
+        <header>
+                <div class="logo">
+                    <a href="index.html">Foster Gardens</a>
+                </div>
+                <button class="burger-menu" aria-label="Open-menu">
+                    ☰
+                </button>
+                <nav class="menu-bar">
+                        <a href="about.html">About us</a>
+                        <a href="services.html">Services</a>
+                        <a href="blog.html">Blog</a>
+                        <a href="portfolio.html">Portfolio</a>
+                    
+                </nav>
+                <a href="#contact-link">
+                        <button class="button-link">GET A QUOTE</button>
                 </a>
-                <a href="index.html">
-                    <h2>Home</h2>
-                </a>
-                <a href="about.html">
-                    <h2> About us</h2>
-                </a>
-                <a href="services.html">
-                    <h2>Services</h2>
-                </a>
-                <a href="blog.html">
-                    <h2>Blog and tips</h2>
-                </a>
-            </header>
+        </header>
+        <main>
+            <div class="portfolio-gallery">
             <!-- For visually impaired; viewers get a close-up image of portfolio-->
-            <a href="images/portfolio/gardening-portfolio-image.jpg">
-                <img src="images/portfolio/gardening-portfolio-image.jpg" width="255">  
-            </a>
-            <a href="images/portfolio/landscape-portfolio-image.jpg">
-                <img src="images/portfolio/landscape-portfolio-image.jpg" width="255"> 
-            </a>
-           <a href="images/portfolio/lighting-portfolio-image.jpg">
-                <img src="images/portfolio/lighting-portfolio-image.jpg" width="255"> 
-           </a>
-           <a href="images/portfolio/paving-portfolio.jpg">
-                <img src="images/portfolio/paving-portfolio.jpg" width="255">
-           </a>
-           <a href="images/portfolio/backyard-portfolio.jpg.jpg">
-                <img src="images/portfolio/backyard-portfolio.jpg.jpg" width="255">  
-            </a>
-            <a href="images/portfolio/complete-landscape-portfolio.jpg.jpg">
-                <img src="images/portfolio/complete-landscape-portfolio.jpg.jpg" width="255">  
-            </a>
-            <a href="images/portfolio/yard-portfolio.jpg.jpg">
-                <img src="images/portfolio/yard-portfolio.jpg.jpg" width="255">  
-            </a>
-           <!--This form is essential on each page to enforce and encourage customer response to action calls -->
+                <a href="images/portfolio/gardening-portfolio-image.jpg">
+                    <img src="images/portfolio/gardening-portfolio-image.jpg" width="255">  
+                </a>
+                <a href="images/portfolio/landscape-portfolio-image.jpg">
+                    <img src="images/portfolio/landscape-portfolio-image.jpg" width="255"> 
+                </a>
+                <a href="images/portfolio/lighting-portfolio-image.jpg">
+                    <img src="images/portfolio/lighting-portfolio-image.jpg" width="255"> 
+                </a>
+                <a href="images/portfolio/paving-portfolio.jpg">
+                    <img src="images/portfolio/paving-portfolio.jpg" width="255">
+                </a>
+                <a href="images/portfolio/backyard-portfolio.jpg.jpg">
+                    <img src="images/portfolio/backyard-portfolio.jpg.jpg" width="255">  
+                </a>
+                <a href="images/portfolio/complete-landscape-portfolio.jpg.jpg">
+                    <img src="images/portfolio/complete-landscape-portfolio.jpg.jpg" width="255">  
+                </a>
+                <a href="images/portfolio/yard-portfolio.jpg.jpg">
+                    <img src="images/portfolio/yard-portfolio.jpg.jpg" width="255">  
+                </a>
+                <a href="/images/portfolio/yard-portfolio2.jpg">
+                    <img src="images/portfolio/yard-portfolio2.jpg">
+                </a>
+                <a href="images/portfolio/yard-portfolio3.jpg">
+                    <img src="images/portfolio/yard-portfolio3.jpg">
+                </a>
+                <a href="images/portfolio/yard-portfolio4.jpg">
+                    <img src="images/portfolio/yard-portfolio4.jpg">
+                </a>
+                <a href="images/portfolio/yard-portfolio5.jpg">
+                    <img src="images/portfolio/yard-portfolio5.jpg">
+                </a>
+                <a href="images/portfolio/yard-portfolio6.jpg">
+                    <img src="images/portfolio/yard-portfolio6.jpg">
+                </a>
+        </div>
+         <!---Form section available for users to get easy quotes---->
+        <div class="quote-box" id="contact-link">
             <h2>GET A FREE QUOTE</h2>
+            <!--This form is essential on each page to enforce and encourage customer response to action calls -->
             <form>
-                <label for="name">First Name</label>
-                <br>
-                <input type="text" id="name" required>
-                <br>
-                <label for="surname">Surname</label>
-                <br>
-                <input type="text" id="surname" required>
+            <!--This is the complete/type section-->
+                <div class="side-by-side">
+                    <label for="name">First Name</label>
+                    <br>
+                    <input type="text" id="name" required>
+                    <br>
+                    <label for="surname">Last name</label>
+                    <br>
+                    <input type="text" id="surname" required>
+                </div>
                 <br>
                 <label for="email">Email Address </label>
                 <br>
@@ -60,22 +94,23 @@
                 <br>
                 <input type="text" id="phone" required>
                 <br>
-                <h6>Select your preferred services:</h6>
+                <!---Beginning of services selection section---->
+                <h5>Select your preferred services:</h5>
                 <label>
-                    <input type="checkbox" value="landscaping">
+                <input type="checkbox" value="landscaping">
                     Landscaping
                 </label>
                 <br>
-                 <label>
+                <label>
                     <input type="checkbox" value="landscaping">
                     Gardening services
                     <br>
-                        <label> 
-                            <input type="checkbox">
-                            Weekly
-                            <br>
-                            <input type="checkbox">
-                            Monthly
+                    <label> 
+                        <input type="checkbox">
+                        Weekly
+                        <br>
+                        <input type="checkbox">
+                        Monthly
                         </label>
                 </label>
                 <br>
@@ -98,27 +133,40 @@
                     <input type="checkbox">
                     Paving and garden lighting
                 </label>
+                <br>
+                <h5>Message:</h5>
+                <input type="text" id="message" required>
+                <br>
+                <button class="submit-button">Submit</button>
             </form>
-             <footer>
-                <h2>Contact Us</h2>
-                <p>
-                    <img src="images/icons/phone.svg" width="28">
-                    082 553 8090
-                </p>
-                <p>
-                    <img src="images/icons/mail.svg" width="28">
-                    john@fostergardens.co.za
-                </p>
-                <p>
+        </div>
+        <div class="contact-section">
+            <ul>
+                <li>
+                    <h2>CONTACT US</h2>
+                </li>
+                <li>
+                    <p>
+                        <img src="images/icons/phone.svg" width="28">
+                        082 522 3875
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <img src="images/icons/mail.svg" width="28">
+                        gardens@foster.co.za
+                    </p>
+                </li>
+                <li>
                     <img src="images/icons/map-pin.svg" width="28">
-                    28 Pretoria Rd
+                    <span>28 Pretoria Road</span>
                     <br>
-                    Highlands North
+                    <span>Highlands North</span>
                     <br>
-                    Johannesburg 2192
-                    <br>
-                </p>
-            </footer>
-        </body>
-    </head>
+                    <span>Johannesburg 2192</span>
+                </li>
+            </ul>
+        </div>
+        </main> 
+    </body>
 </html>
