@@ -35,6 +35,7 @@ a:link, a:visited {
 main { 
     padding-top:62px;
 }
+
 /*===================================
 MENU SECTION -- DEFAULT DEVICE:PHONE 
 ====================================*/
@@ -553,10 +554,6 @@ TABLET - 768px+
     padding-top:68px;
     }
 
-   .burger-menu { 
-        display:none; 
-    }
-
     .contact-top { 
         background-color: white;
         display:flex;
@@ -601,13 +598,15 @@ TABLET - 768px+
         gap:10px;
     }
 
-    .menu-bar a {
+   /* .menu-bar a {
         color: white;
     }
 
     .menu-bar a:hover {
         color:black; 
-    }
+    } */
+
+    
 
     /*=========================
     INDEX PAGE - DEFAULT:TABLET 
