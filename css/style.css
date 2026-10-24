@@ -19,7 +19,7 @@ img {
 
 p {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 10px; 
+    font-size:small; 
 }
 
 h2 {
@@ -54,7 +54,7 @@ header {
     margin:0;
     width:100%;
     z-index:999;
-    height:60px;
+    height:55px;
 }
 
 .burger-menu {
@@ -64,6 +64,40 @@ header {
     border: none;
     cursor: pointer;
     color: white;
+}
+
+header nav.menu-bar {
+    display: none;
+    position: absolute;
+    top:100%; 
+    left:0; 
+    right:auto; 
+
+    width:100%;
+    max-width:none;
+    box-sizing: border-box;
+    padding-top: 10px;
+    padding: 10px;  
+
+    background-color: #069e2d;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    flex-direction: column;
+    z-index: 1000;
+}
+
+.menu-bar a { 
+    display: block;
+    padding: 14px 32px;
+    margin: 0 10px; 
+    color: white;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+.menu-bar a:hover { 
+    background-color:#058526;
+    color: black;
+   
 }
 
 .logo a { 
@@ -181,13 +215,10 @@ FOUNDER SECTION
 .founder-description {
     display:flex;
     flex-direction:column;
-    /*gap:10px;*/
     padding-left: 20px;
-    /*padding-top:40px;*/
     padding-bottom:40px;
     background-color: white;
     text-align: center;
-    /*height:max-content;*/
 }
 
 .founder-description p { 
@@ -220,6 +251,10 @@ FORM AND QUOTATION SECTION
     width:100%;
     color:whitesmoke;
     font-family:Arial, Helvetica, sans-serif;  
+}
+
+.frequency-options {
+    margin-left: 25px;
 }
 
 .quote-box label { 
@@ -451,14 +486,13 @@ About US text styles -- paragraph
     text-align: justify;
     padding-left:40px; 
     padding-right:30px;
-    /*padding-bottom:40px;*/ 
     margin: 0 auto;
 }
 
 .additional-services li { 
     position:relative;
     padding-left: 30px;
-    font-size: smaller;
+    font-size: small;
 }     
 
 .additional-services li::before { 
@@ -478,7 +512,7 @@ About US text styles -- paragraph
     display: flex;
     align-items: center;
     gap:10px
-    margin: top 0;
+    margin:top 0;
 }
 
 .tree { 
@@ -522,7 +556,7 @@ OUR HISTORY SECTION
 .history-description p {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     text-align: justify;
-    font-size: 9px;
+    font-size: small;
     /*padding-left:30px; 
     padding-right:30px;*/
     width:70%; 
@@ -541,7 +575,7 @@ OUR HISTORY SECTION
 /* ====================
 TABLET - 768px+
 ========================*/
-@media(min-width: 768px) {
+@media(min-width: 768px) and (max-width: 1023px) {
     /*===========================
     GENERAL SETTINGS
     =============================*/
@@ -550,8 +584,12 @@ TABLET - 768px+
         font-size:large;
     } 
     
+    p{ 
+        font-size: medium;
+    }
+
     main { 
-    padding-top:68px;
+        padding-top:68px;
     }
 
     .contact-top { 
@@ -582,31 +620,26 @@ TABLET - 768px+
         background: #44d62c;
         color:white; 
         cursor:pointer;
-        padding:9px;
+        padding: 9px;
         border:#069e2d;
         font-size: 100%;
     }
 
+    header .button-link { 
+        flex-shrink:0; 
+    }
+
+    .burger-menu{
+        display:block;
+    }
+
+    header nav.menu-bar {
+        display: none;
+    }
+
     header { 
         top:40px;
-        position:fixed;
-        z-index:999;
-    }
-
-    nav { 
-        display:flex; 
-        gap:10px;
-    }
-
-   /* .menu-bar a {
-        color: white;
-    }
-
-    .menu-bar a:hover {
-        color:black; 
-    } */
-
-    
+    } 
 
     /*=========================
     INDEX PAGE - DEFAULT:TABLET 
@@ -634,7 +667,7 @@ TABLET - 768px+
     CHOOSE-US SECTION 
     =======================*/
     .choose-us p { 
-        font-size:14px;
+        font-size:small;
     }    
 
     /*=====================
@@ -659,6 +692,12 @@ TABLET - 768px+
     /*======================
     ABOUT US PAGE
     ========================*/
+    .additional-services li { 
+        position:relative;
+        padding-left: 30px;
+        font-size: medium;
+    }   
+
     .tree img { 
         display:flex;
         width: 700px;
@@ -678,9 +717,7 @@ TABLET - 768px+
     .history-description p {
         font-family:Verdana, Geneva, Tahoma, sans-serif;
         text-align: justify;
-        font-size: 14px;
-        /*padding-left:30px; 
-        padding-right:30px;*/
+        font-size: medium;
         width:70%; 
         margin:0 auto;
     }
@@ -692,7 +729,6 @@ TABLET - 768px+
         max-width: 720px;
         margin:auto;  
     }
-
 }
 
 /*======================
@@ -718,50 +754,89 @@ DESKTOP - 1024px+
         display:none; 
     }
 
+    header { 
+        display: flex;
+        align-items: center;
+        justify-content:space-between;
+        padding:0 24px;
+        background-color: #069e2d;
+        position:fixed;
+        top:40px;
+        left: 0;
+        width:100%;
+        z-index:999;
+        height:85px;
+        box-sizing: border-box;
+    }
+
+    header nav.menu-bar { 
+        display:flex; 
+        flex-direction: row; 
+        position: static;
+        align-items: center; 
+        
+        width: auto;
+        max-width: none; 
+        padding: 0;
+        margin: 0;
+
+        background-color: transparent; 
+        box-shadow: none; 
+        gap: 23px;
+        flex: 0 1 auto;  
+    }
+
     .contact-top { 
         background-color: white;
         display:flex;
         flex-direction: row;
         list-style:none;
         margin:0;
-        justify-content:end;
-        gap:40px;
+        align-items: center;
+        justify-content:flex-end;
+        gap:24px;
         font-size: 15px;
         position:fixed;
         top:0;
+        padding: 0 24px; 
         width:100%;
         z-index:1000;
         height:40px;
     }
 
     .contact-top img { 
-        padding-top: 10px;
+        padding-top: 0;
     }
 
     .contact-top p { 
-        padding-right:;
+        padding-right:0; 
+        margin: 0;
     }
 
     .button-link { 
         background: #44d62c;
         color:white; 
         cursor:pointer;
-        padding:9px;
+        padding: 9px;
         border:#069e2d;
-        font-size: 100%;
-    }
-
-    nav { 
-        display:flex; 
-        gap:10px; 
+        font-size:100%;
+        flex: 0 0 auto; 
+        width: auto;
     }
 
     .menu-bar a {
+        display: block;
+        padding: 0;
+        margin:0; 
+
         color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        white-space: nowrap;
     }
 
     .menu-bar a:hover {
         color:black; 
+        background-color: transparent;
     }
 
     /*===========================
@@ -777,7 +852,7 @@ DESKTOP - 1024px+
         flex-direction: row;
         min-height: 200px;
         height:auto;
-        padding-top: 50px;
+        padding-top: 80px;
         padding-bottom: 30px;
     }
 
@@ -825,7 +900,7 @@ DESKTOP - 1024px+
     CHOOSE-US SECTION 
     =======================*/
     .choose-us p { 
-        font-size:14px;
+        font-size:medium;
     }   
 
     /*===================
@@ -880,6 +955,12 @@ DESKTOP - 1024px+
     /*=======================
     ABOUT US PAGE
     =========================*/
+    .additional-services li { 
+        position:relative;
+        padding-left: 30px;
+        font-size: large;
+    } 
+
     .tree img { 
         display:flex;
         width: 1000px;

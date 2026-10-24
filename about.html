@@ -1,7 +1,7 @@
 <!DOCTYPE html> 
 <html> 
     <head>
-        <link rel="stylesheet" href="style.css"> 
+        <link rel="stylesheet" href="css/style.css"> 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>    
     <body class="about-background">
@@ -21,15 +21,15 @@
                     ☰
                 </button>
                 <nav class="menu-bar">
-                        <a href="about.html">About us</a>
-                        <a href="services.html">Services</a>
-                        <a href="blog.html">Blog</a>
-                        <a href="portfolio.html">Portfolio</a>
-                    
+                    <a href="about.html">About us</a>
+                    <a href="services.html">Services</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="portfolio.html">Portfolio</a>
                 </nav>
                 <a href="#contact-link">
-                        <button class="button-link">GET A QUOTE</button>
+                    <button class="button-link">GET A QUOTE</button>
                 </a>
+             
             </header>
         <main>
             <div class="about-description">
@@ -120,16 +120,18 @@
                     <label>
                         <input type="checkbox" value="landscaping">
                         Gardening services
-                        <br>
-                            <label> 
-                                <input type="checkbox">
-                                Weekly
-                                <br>
-                                <input type="checkbox">
-                                Monthly
-                            </label>
                     </label>
-                    <br>
+                    <div class="frequency-options">
+                        <label> 
+                            <input type="checkbox" id="weekly-checkbox" value="weekly">
+                            Weekly
+                        </label>
+                        <br>
+                        <label>
+                            <input type="checkbox" id="monthly-checkbox" value="monthly">
+                            Monthly
+                        </label>
+                    </div>
                     <label>
                         <input type="checkbox">
                         Composting and garden-waste management
@@ -187,7 +189,9 @@
                 </ul>
             </div>
         </main>
+        <!-- JQuery internet website -->
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
         <!---- External JavaScript file included here ----->
-        <script src="scripts.js"></script>          
+        <script src="javascript/scripts.js"></script>          
     </body>
 </html>
