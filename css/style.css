@@ -120,7 +120,39 @@ nav {
 /*=========================
 INDEX PAGE -- DEFAULT:PHONE
 ===========================*/
+/*========================
+ Top header texts
+ =========================*/
+.index-banner {
+    background-image: url('../images/blog/compost-and-soil.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 400px; 
+    padding: 80px 30px; 
+    clip-path: url(#wave-clip); 
+    display:flex; 
+   /* align-items: center;
+    justify-content: center;*/
+}
 
+.index-banner h3 { 
+    color: white;
+    text-align: left !important;
+    width:100%; 
+    font-size: 38px; 
+    font-weight: 700;
+    line-height: 1.3;
+    text-shadow: 2px 3px 6px rgba(0,0,0,0.6);
+    max-width: 500px;
+    margin:0; 
+}
+
+.secondary-banner { 
+    font-size: 24px;
+    color:#058526;
+    text-align: center;
+}
 /*==============================================
 Setting the background image for the index page
 ================================================*/
@@ -225,7 +257,16 @@ Why choose us section
 
 .choose-us h2{
     color:black;
-    text-align: center;
+    margin-bottom: 5px;
+}
+
+.choose-us h3 { 
+    color:#44d62c;
+    margin-top:0;  
+}
+
+.choose-us a {
+    margin-top:10px;
 }
 
 /*======================
@@ -233,14 +274,19 @@ Why choose us section
 ========================*/
 .reviews {
     text-align: center;
-    padding: 60px 20px; 
+    padding: 80px 20px; 
+    background-image: url('../images/about-us/leaves3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     overflow: hidden;
+    position: relative;
 }
 
 .review-container { 
     max-width:600px;
     margin:30px auto; 
-    overflow: hidden; 
+    overflow: hidden;
 }
 
 .review-track { 
@@ -260,6 +306,33 @@ Why choose us section
     color: #d4a017; 
 }
 
+.review strong { 
+    color:#04773b;
+}
+
+.review-dots { 
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; 
+    margin-top:20px; 
+}
+
+.review-dot {
+    width:10px; 
+    height:10px; 
+    border-radius:50%; 
+    background-color: #ccc; 
+    border:none; 
+    cursor:pointer; 
+    padding:0; 
+    transition: all 0.3s ease; 
+}
+
+.review-dot.active {
+    background-color: #d4a017;
+    transform: scale(1.3); 
+}
 /*====================
 FOUNDER SECTION 
 ======================*/

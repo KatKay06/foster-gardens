@@ -42,55 +42,101 @@ $(document).ready(function() {
     // Select the review elements
     const $reviewSection = $('#reviews');
     const $track = $('.review-track'); 
-    const $reviews = $('.review'); 
+    const $reviews = $('.review');
+    const $dotsContainer = $('.review-dots'); 
 
     let currentIndex = 0; 
     let slideInterval = null; 
 
-    // Move to the next review 
-    function nextReview() { 
-        currentIndex = (currentIndex + 1) % $reviews.length; 
+    if(!$reviewSection.length || $reviews.length < 2) { 
+        console.error("Review carousel elements missing!"); 
+        return;
+    }
+
+    // Create pagination dots 
+    $reviews.each(function(index) {
+        const $dot = $('<button>', {
+            class: 'review-dot', 
+            type: 'button', 
+            'aria-label': 'Go to review' + (index + 1)
+        }); 
+
+        $dotsContainer.append($dot); 
+    }); 
+
+    const $dots = $('.review-dot'); 
+
+    //Update the active dot 
+    function updateDots() {
+        $dots
+            .removeClass('active')
+            .attr('aria-current', 'false'); 
+
+        $dots.eq(currentIndex)
+            .addClass('active')
+            .attr('aria-current', 'true'); 
+    }
+
+    //Move to a specific review 
+    function showReview(index) { 
+        currentIndex = index; 
 
         $track.css(
             'transform', 
             'translateX(-' + (currentIndex * 100) + '%)'
         ); 
+        updateDots(); 
     }
 
-    // Start automatically sliding when close to the section 
+    // Move to the next review 
+    function nextReview() { 
+        let nextIndex = (currentIndex + 1) % 
+        $reviews.length; 
+        
+        showReview(nextIndex); 
+    }
+
+    // Start slider once close to the section 
     function startSlider() {
         if (!slideInterval) { 
-            slideInterval = setInterval (
-                nextReview, 
-                5000
-            );
+            slideInterval = setInterval(nextReview, 5000); 
         }
     }
 
-    // Stop automatically sliding once away from the section 
+    // Stop slider automatically once away from section
     function stopSlider() {
-        clearInterval(slideInterval); 
-        slideInterval = null; 
-    }
+         clearInterval(slideInterval); 
+         slideInterval = null; 
+    } 
 
-    //Intersection Observer
+    // Clickable pagination dots
+    $dots.on('click', function() { 
+        const selectedIndex = $(this).index(); 
+
+        showReview(selectedIndex); 
+
+        //Restart the timer after manual selection 
+        stopSlider(); 
+        startSlider(); 
+    }); 
+
+    //Initialise first preview 
+    showReview(0); 
+
+    // Intersection observer 
     const observer = new IntersectionObserver(
         function(entries) { 
-            $.each(entries, function(index, entry) { 
+            entries.forEach(function(entry) { 
                 if (entry.isIntersecting) { 
-                    
-                    //reviews section is visible 
                     startSlider(); 
                 } else { 
-                    // Reviews section is outside viewport 
                     stopSlider(); 
                 }
-            }); 
+            });
         },
-        {
+        { 
             threshold: 0.1
         }
     ); 
-    //Observe the reviews section 
     observer.observe($reviewSection[0]);
 });
