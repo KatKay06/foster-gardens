@@ -1,3 +1,4 @@
+// Menu-bar section 
 $(document).ready(function () { 
     // The given media query sizes for the dropdown menu
     const mobileTablet = window.matchMedia( 
@@ -36,3 +37,60 @@ $(document).ready(function () {
         }, 150);
     });
 }); 
+
+$(document).ready(function() {
+    // Select the review elements
+    const $reviewSection = $('#reviews');
+    const $track = $('.review-track'); 
+    const $reviews = $('.review'); 
+
+    let currentIndex = 0; 
+    let slideInterval = null; 
+
+    // Move to the next review 
+    function nextReview() { 
+        currentIndex = (currentIndex + 1) % $reviews.length; 
+
+        $track.css(
+            'transform', 
+            'translateX(-' + (currentIndex * 100) + '%)'
+        ); 
+    }
+
+    // Start automatically sliding when close to the section 
+    function startSlider() {
+        if (!slideInterval) { 
+            slideInterval = setInterval (
+                nextReview, 
+                5000
+            );
+        }
+    }
+
+    // Stop automatically sliding once away from the section 
+    function stopSlider() {
+        clearInterval(slideInterval); 
+        slideInterval = null; 
+    }
+
+    //Intersection Observer
+    const observer = new IntersectionObserver(
+        function(entries) { 
+            $.each(entries, function(index, entry) { 
+                if (entry.isIntersecting) { 
+                    
+                    //reviews section is visible 
+                    startSlider(); 
+                } else { 
+                    // Reviews section is outside viewport 
+                    stopSlider(); 
+                }
+            }); 
+        },
+        {
+            threshold: 0.1
+        }
+    ); 
+    //Observe the reviews section 
+    observer.observe($reviewSection[0]);
+});
