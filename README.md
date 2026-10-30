@@ -11,5 +11,8 @@ Updated CSS media queries to separate phone, tablet and desktop navigation layou
 Fixed CSS conflicts affecting visibility of desktop navigation menu.
 Moved the mobile/tablet dropdown menu to the left and updated dropdown CSS attributes. 
 Corrected HTML label structure and assigned unique IDs to weekly and monthly checkboxes for indenting under Gardening Services. 
-
+Added images and descriptions for services preview. 
+Generated a dynamic reviews carousel that automatically slides to the next when viewer is within the section.
+Added 'Get Quote' button to 'choose-us' section for continuous user-prompt and ease of access. 
+Added banner image and adjusted its shape to create a smooth s-curve using svg elements and css styling. 
 
