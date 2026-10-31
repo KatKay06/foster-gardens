@@ -132,8 +132,6 @@ INDEX PAGE -- DEFAULT:PHONE
     padding: 80px 30px; 
     clip-path: url(#wave-clip); 
     display:flex; 
-   /* align-items: center;
-    justify-content: center;*/
 }
 
 .index-banner h3 { 
@@ -206,6 +204,8 @@ Text styles for each service description
     color: white;
     margin: 0 auto; 
     width: 65%;
+    box-shadow: 2px 5px 6px rgba(0, 0, 0, 0.55);
+    border-radius: 12px;
 }
 
 .services-preview, .choose-us { 
@@ -284,22 +284,42 @@ Why choose us section
 }
 
 .review-container { 
-    max-width:600px;
-    margin:30px auto; 
+    position:relative; 
+    width:100%; 
+    height: 350px;  
     overflow: hidden;
+    background-color: #fff;
+    background-color: rgb(255, 255, 255, 0.75);
+    border-radius: 12px;
 }
 
 .review-track { 
-    display: flex;
-    transition:transform 0.8s ease-in-out; 
+    position: relative;
+    width: 100%; 
+    height:100%; 
+    background-color: #fff;
+    background: transparent;
 }
 
 .review { 
-    min-width: 100%;
-    box-sizing:border-box; 
-    padding: 35px; 
-    background: #f5f5f5;
-    border-radius: 15px;
+    position:absolute;
+    inset:0; 
+    width: 100%;
+    height: 100%; 
+    padding: 25px; 
+    visibility: hidden;
+    box-sizing: border-box; 
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: transparent;
+}
+
+.review.active { 
+    visibility: visible;
 }
 
 .review h3 { 
@@ -308,6 +328,18 @@ Why choose us section
 
 .review strong { 
     color:#04773b;
+}
+
+.review h3, .review p, .review strong { 
+    opacity: 0;
+    display: block; 
+    transform: translateX(100%);
+    transition: transform 0.7 ease, opacity 0.7 ease; 
+}
+
+.review.active h3, .review.active p, .review.active strong { 
+    opacity: 1;
+    transform: translateY(0); 
 }
 
 .review-dots { 
@@ -517,24 +549,82 @@ Border/div surrounding portfolio images and layout
 .portfolio-gallery { 
     display:grid; 
     grid-template-columns:1fr;
-    gap:12px;
-    padding-bottom: 40px;
-    padding-top:80px;
-    z-index: inherit;
-    overflow-x: hidden;
+    gap:25px;
+    padding: 50px 25px 40px; 
     margin:0 auto; 
     width:100%;
+    max-width: 400px; 
+    box-sizing: border-box;
 }
 
 /*=============================
 Portfolio Images styles
 ===============================*/
 .portfolio-gallery img { 
-    width:70%;
+    width:100%;
+    height:240px; 
     margin: 0 auto; 
     object-fit: cover;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    display: block;
+    transition: transform 0.4s ease; 
+    cursor: pointer;
+}
+
+.portfolio-gallery img:hover { 
+    transform: scale(1.08); 
+}
+
+/*===========================
+Portfolio image lightbox
+=============================*/
+/* Makes the images clickable*/
+.portfolio-gallery a {
+    cursor:pointer; 
+    display:block; 
+    overflow: hidden;
+    width:100%; 
+    border-radius: 10px;
+}
+
+/*Displays a lightbox background*/
+.image-lightbox {
+    display: none;
+    position: fixed;
+    inset:0; 
+    z-index:9999; 
+    background: rgba(0, 0, 0, 0.95); 
     justify-content: center;
+    align-items: center;
+    padding: 70px 20px 20px;
+    box-sizing: border-box;
+}
+
+.image-lightbox img { 
+    max-width: 95%; 
+    max-height: 90%; 
+    width:auto; 
+    height: auto; 
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+/*Back button*/
+.close-lightbox {
+    position: absolute;
+    top: 20px; 
+    right: 25px; 
+    padding:12px 22px;
+    background: white;
+    color:#222; 
+    border: none;
+    border-radius:25px; 
+    font-size:16px; 
+    cursor: pointer; 
+    transition: background 0.3s ease;
+}
+
+.close-lightbox:hover {
+    background: white;
 }
 
 /*===========================

@@ -1,4 +1,4 @@
-// Menu-bar section 
+// Menu-bar section functionality 
 $(document).ready(function () { 
     // The given media query sizes for the dropdown menu
     const mobileTablet = window.matchMedia( 
@@ -38,105 +38,243 @@ $(document).ready(function () {
     });
 }); 
 
+// Reviews section functionality 
 $(document).ready(function() {
-    // Select the review elements
+
     const $reviewSection = $('#reviews');
-    const $track = $('.review-track'); 
     const $reviews = $('.review');
-    const $dotsContainer = $('.review-dots'); 
+    const $dotsContainer = $('.review-dots');
 
-    let currentIndex = 0; 
-    let slideInterval = null; 
+    let currentIndex = 0;
+    let slideInterval = null;
+    let isAnimating = false;
 
-    if(!$reviewSection.length || $reviews.length < 2) { 
-        console.error("Review carousel elements missing!"); 
+    if (!$reviewSection.length || $reviews.length < 2) {
+        console.error("Review carousel elements missing!");
         return;
     }
 
-    // Create pagination dots 
+    // Create pagination dots
     $reviews.each(function(index) {
-        const $dot = $('<button>', {
-            class: 'review-dot', 
-            type: 'button', 
-            'aria-label': 'Go to review' + (index + 1)
-        }); 
+        $dotsContainer.append(
+            $('<button>', {
+                class: 'review-dot',
+                type: 'button',
+                'aria-label': 'Go to review ' + (index + 1)
+            })
+        );
+    });
 
-        $dotsContainer.append($dot); 
-    }); 
+    const $dots = $dotsContainer.find('.review-dot');
 
-    const $dots = $('.review-dot'); 
+    // Get the text elements
+    function getTextElements($review) {
+        return $review.find('h3, p, strong');
+    }
 
-    //Update the active dot 
+    // Update the dots
     function updateDots() {
-        $dots
-            .removeClass('active')
-            .attr('aria-current', 'false'); 
+        $dots.removeClass('active')
+            .attr('aria-current', 'false');
 
         $dots.eq(currentIndex)
             .addClass('active')
-            .attr('aria-current', 'true'); 
+            .attr('aria-current', 'true');
     }
 
-    //Move to a specific review 
-    function showReview(index) { 
-        currentIndex = index; 
+    // Initialise
+    $reviews.each(function(index) {
 
-        $track.css(
-            'transform', 
-            'translateX(-' + (currentIndex * 100) + '%)'
-        ); 
-        updateDots(); 
+        const $review = $(this);
+        const $text = getTextElements($review);
+
+        if (index === 0) {
+
+            $review.addClass('active')
+                .css('visibility', 'visible');
+
+            $text.css({
+                transform: 'translateX(0)',
+                opacity: 1
+            });
+
+        } else {
+
+            $review.css('visibility', 'hidden');
+
+            $text.css({
+                transform: 'translateX(100%)',
+                opacity: 0
+            });
+
+        }
+
+    });
+
+    // Show next review
+    function showReview(index) {
+
+        if (isAnimating || index === currentIndex) return;
+
+        isAnimating = true;
+
+        const $current = $reviews.eq(currentIndex);
+        const $next = $reviews.eq(index);
+
+        const $currentText = getTextElements($current);
+        const $nextText = getTextElements($next);
+
+        // Prepare next review outside the viewport
+        $next.css('visibility', 'visible');
+
+        $nextText.css({
+            transition: 'none',
+            transform: 'translateX(100%)',
+            opacity: 0
+        });
+
+        // Force layout
+        $next[0].offsetHeight;
+
+        // Animate both reviews simultaneously
+        $currentText.css({
+            transform: 'translateX(-100%)',
+            opacity: 0
+        });
+
+        $nextText.css({
+            transition: 'transform 0.7s ease, opacity 0.7s ease',
+            transform: 'translateX(0)',
+            opacity: 1
+        });
+
+        // Update active review
+        currentIndex = index;
+        updateDots();
+
+        // Finish transition
+        setTimeout(function() {
+
+            $current.removeClass('active')
+                .css('visibility', 'hidden');
+
+            $next.addClass('active');
+
+            isAnimating = false;
+
+        }, 750);
     }
 
-    // Move to the next review 
-    function nextReview() { 
-        let nextIndex = (currentIndex + 1) % 
-        $reviews.length; 
-        
-        showReview(nextIndex); 
+    // Next review
+    function nextReview() {
+        const nextIndex = (currentIndex + 1) % $reviews.length;
+        showReview(nextIndex);
     }
 
-    // Start slider once close to the section 
+    // Start autoplay
     function startSlider() {
-        if (!slideInterval) { 
-            slideInterval = setInterval(nextReview, 5000); 
+        if (!slideInterval) {
+            slideInterval = setInterval(nextReview, 6000);
         }
     }
 
-    // Stop slider automatically once away from section
+    // Stop autoplay
     function stopSlider() {
-         clearInterval(slideInterval); 
-         slideInterval = null; 
-    } 
+        clearInterval(slideInterval);
+        slideInterval = null;
+    }
 
-    // Clickable pagination dots
-    $dots.on('click', function() { 
-        const selectedIndex = $(this).index(); 
+    // Pagination clicks
+    $dots.on('click', function() {
 
-        showReview(selectedIndex); 
+        const selectedIndex = $(this).index();
 
-        //Restart the timer after manual selection 
-        stopSlider(); 
-        startSlider(); 
-    }); 
+        if (selectedIndex === currentIndex || isAnimating) return;
 
-    //Initialise first preview 
-    showReview(0); 
+        stopSlider();
+        showReview(selectedIndex);
+        startSlider();
 
-    // Intersection observer 
+    });
+
+    updateDots();
+
+    // Intersection Observer
     const observer = new IntersectionObserver(
-        function(entries) { 
-            entries.forEach(function(entry) { 
-                if (entry.isIntersecting) { 
-                    startSlider(); 
-                } else { 
-                    stopSlider(); 
+        function(entries) {
+
+            entries.forEach(function(entry) {
+
+                if (entry.isIntersecting) {
+                    startSlider();
+                } else {
+                    stopSlider();
                 }
+
             });
+
         },
-        { 
+        {
             threshold: 0.1
         }
-    ); 
+    );
+
     observer.observe($reviewSection[0]);
+
+});
+
+// Portfolio gallery functionality 
+
+$(document).ready(function() {
+
+    // Open enlarged image
+    $('.portfolio-gallery a.lightbox-image').on('click', function(e) {
+
+        e.preventDefault();
+
+        const imageSource = $(this).attr('href');
+        const imageAlt = $(this).find('img').attr('alt');
+
+        $('#enlargedImage')
+            .attr('src', imageSource)
+            .attr('alt', imageAlt);
+
+        $('#imageLightbox').css('display', 'flex');
+
+        $('body').css('overflow', 'hidden');
+
+    });
+
+    // Close lightbox
+    function closeLightbox() {
+
+        $('#imageLightbox').hide();
+
+        $('#enlargedImage').attr('src', '');
+
+        $('body').css('overflow', '');
+
+    }
+
+    // Back button
+    $('#closeLightbox').on('click', closeLightbox);
+
+    // Click outside image
+    $('#imageLightbox').on('click', function(e) {
+
+        if ($(e.target).is('#imageLightbox')) {
+            closeLightbox();
+        }
+
+    });
+
+    // Escape key
+    $(document).on('keydown', function(e) {
+
+        if (e.key === 'Escape') {
+            closeLightbox();
+        }
+
+    });
+
 });

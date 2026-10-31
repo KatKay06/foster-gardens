@@ -34,143 +34,149 @@
         <main>
             <div class="portfolio-gallery">
             <!-- For visually impaired; viewers get a close-up image of portfolio-->
-                <a href="images/portfolio/gardening-portfolio-image.jpg">
-                    <img src="images/portfolio/gardening-portfolio-image.jpg" width="255">  
+                <a href="images/portfolio/gardening-portfolio-image.jpg" class="lightbox-image">
+                    <img src="images/portfolio/gardening-portfolio-image.jpg" width="255" alt="gardening project">  
                 </a>
-                <a href="images/portfolio/landscape-portfolio-image.jpg">
-                    <img src="images/portfolio/landscape-portfolio-image.jpg" width="255"> 
+                <a href="images/portfolio/landscape-portfolio-image.jpg" class="lightbox-image">
+                    <img src="images/portfolio/landscape-portfolio-image.jpg" width="255" alt="landscape project"> 
                 </a>
-                <a href="images/portfolio/lighting-portfolio-image.jpg">
-                    <img src="images/portfolio/lighting-portfolio-image.jpg" width="255"> 
+                <a href="images/portfolio/lighting-portfolio-image.jpg" class="lightbox-image">
+                    <img src="images/portfolio/lighting-portfolio-image.jpg" width="255" alt="garden lighting"> 
                 </a>
-                <a href="images/portfolio/paving-portfolio.jpg">
-                    <img src="images/portfolio/paving-portfolio.jpg" width="255">
+                <a href="images/portfolio/paving-portfolio.jpg" class="lightbox-image">
+                    <img src="images/portfolio/paving-portfolio.jpg" width="255" alt="paving project">
                 </a>
-                <a href="images/portfolio/backyard-portfolio.jpg.jpg">
-                    <img src="images/portfolio/backyard-portfolio.jpg.jpg" width="255">  
+                <a href="images/portfolio/backyard-portfolio.jpg.jpg" class="lightbox-image">
+                    <img src="images/portfolio/backyard-portfolio.jpg.jpg" width="255" alt="backyard project">  
                 </a>
-                <a href="images/portfolio/complete-landscape-portfolio.jpg.jpg">
-                    <img src="images/portfolio/complete-landscape-portfolio.jpg.jpg" width="255">  
+                <a href="images/portfolio/complete-landscape-portfolio.jpg.jpg" class="lightbox-image">
+                    <img src="images/portfolio/complete-landscape-portfolio.jpg.jpg" width="255" alt="complete landscape">  
                 </a>
-                <a href="images/portfolio/yard-portfolio.jpg.jpg">
-                    <img src="images/portfolio/yard-portfolio.jpg.jpg" width="255">  
+                <a href="images/portfolio/yard-portfolio.jpg.jpg" class="lightbox-image">
+                    <img src="images/portfolio/yard-portfolio.jpg.jpg" width="255" alt="garden project">  
                 </a>
-                <a href="/images/portfolio/yard-portfolio2.jpg">
-                    <img src="images/portfolio/yard-portfolio2.jpg">
+                <a href="/images/portfolio/yard-portfolio2.jpg" class="lightbox-image">
+                    <img src="images/portfolio/yard-portfolio2.jpg" alt="garden project">
                 </a>
-                <a href="images/portfolio/yard-portfolio3.jpg">
-                    <img src="images/portfolio/yard-portfolio3.jpg">
+                <a href="images/portfolio/yard-portfolio3.jpg" class="lightbox-image">
+                    <img src="images/portfolio/yard-portfolio3.jpg" alt="garden project">
                 </a>
-                <a href="images/portfolio/yard-portfolio4.jpg">
-                    <img src="images/portfolio/yard-portfolio4.jpg">
+                <a href="images/portfolio/yard-portfolio4.jpg" class="lightbox-image">
+                    <img src="images/portfolio/yard-portfolio4.jpg" alt="garden project">
                 </a>
-                <a href="images/portfolio/yard-portfolio5.jpg">
-                    <img src="images/portfolio/yard-portfolio5.jpg">
+                <a href="images/portfolio/yard-portfolio5.jpg" class="lightbox-image">
+                    <img src="images/portfolio/yard-portfolio5.jpg" alt="garden project">
                 </a>
-                <a href="images/portfolio/yard-portfolio6.jpg">
-                    <img src="images/portfolio/yard-portfolio6.jpg">
+                <a href="images/portfolio/yard-portfolio6.jpg" class="lightbox-image">
+                    <img src="images/portfolio/yard-portfolio6.jpg" alt="garden project">
                 </a>
-        </div>
-         <!---Form section available for users to get easy quotes---->
-        <div class="quote-box" id="contact-link">
-            <h2>GET A FREE QUOTE</h2>
-            <!--This form is essential on each page to enforce and encourage customer response to action calls -->
-            <form>
-            <!--This is the complete/type section-->
-                <div class="side-by-side">
-                    <label for="name">First Name</label>
+            </div>
+             <!---Form section available for users to get easy quotes---->
+            <div class="quote-box" id="contact-link">
+                <h2>GET A FREE QUOTE</h2>
+                <!--This form is essential on each page to enforce and encourage customer response to action calls -->
+                <form>
+                <!--This is the complete/type section-->
+                    <div class="side-by-side">
+                        <label for="name">First Name</label>
+                        <br>
+                        <input type="text" id="name" required>
+                        <br>
+                        <label for="surname">Last name</label>
+                        <br>
+                        <input type="text" id="surname" required>
+                    </div>
                     <br>
-                    <input type="text" id="name" required>
+                    <label for="email">Email Address </label>
                     <br>
-                    <label for="surname">Last name</label>
+                    <input type="text" id="email" required>
                     <br>
-                    <input type="text" id="surname" required>
-                </div>
-                <br>
-                <label for="email">Email Address </label>
-                <br>
-                <input type="text" id="email" required>
-                <br>
-                <label for="phone">Phone</label>
-                <br>
-                <input type="text" id="phone" required>
-                <br>
-                <!---Beginning of services selection section---->
-                <h5>Select your preferred services:</h5>
-                <label>
-                <input type="checkbox" value="landscaping">
-                    Landscaping
-                </label>
-                <br>
-                <label>
+                    <label for="phone">Phone</label>
+                    <br>
+                    <input type="text" id="phone" required>
+                    <br>
+                    <!---Beginning of services selection section---->
+                    <h5>Select your preferred services:</h5>
+                    <label>
                     <input type="checkbox" value="landscaping">
-                    Gardening services
-                </label>
-                <div class="frequency-options">
-                    <label> 
-                        <input type="checkbox" id="weekly-checkbox" value="weekly">
-                        Weekly
+                        Landscaping
                     </label>
                     <br>
                     <label>
-                        <input type="checkbox" id="monthly-checkbox" value="monthly">
-                        Monthly
+                        <input type="checkbox" value="landscaping">
+                        Gardening services
                     </label>
-                </div>
-                <label>
-                    <input type="checkbox">
-                    Composting and garden-waste management
-                </label>
-                <br>
-                <label>
-                    <input type="checkbox">
-                    Planting, soil and pest control services 
-                </label>
-                <br> 
-                <label>
-                    <input type="checkbox">
-                    Irrigation and water management services 
-                </label>
-                <br>
-                <label>
-                    <input type="checkbox">
-                    Paving and garden lighting
-                </label>
-                <br>
-                <h5>Message:</h5>
-                <input type="text" id="message" required>
-                <br>
-                <button class="submit-button">Submit</button>
-            </form>
-        </div>
-        <div class="contact-section">
-            <ul>
-                <li>
-                    <h2>CONTACT US</h2>
-                </li>
-                <li>
-                    <p>
-                        <img src="images/icons/phone.svg" width="28">
-                        082 522 3875
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        <img src="images/icons/mail.svg" width="28">
-                        gardens@foster.co.za
-                    </p>
-                </li>
-                <li>
-                    <img src="images/icons/map-pin.svg" width="28">
-                    <span>28 Pretoria Road</span>
+                    <div class="frequency-options">
+                        <label> 
+                            <input type="checkbox" id="weekly-checkbox" value="weekly">
+                            Weekly
+                        </label>
+                        <br>
+                        <label>
+                            <input type="checkbox" id="monthly-checkbox" value="monthly">
+                            Monthly
+                        </label>
+                    </div>
+                    <label>
+                        <input type="checkbox">
+                        Composting and garden-waste management
+                    </label>
                     <br>
-                    <span>Highlands North</span>
+                    <label>
+                        <input type="checkbox">
+                        Planting, soil and pest control services 
+                    </label>
+                    <br> 
+                    <label>
+                        <input type="checkbox">
+                        Irrigation and water management services 
+                    </label>
                     <br>
-                    <span>Johannesburg 2192</span>
-                </li>
-            </ul>
-        </div>
+                    <label>
+                        <input type="checkbox">
+                        Paving and garden lighting
+                    </label>
+                    <br>
+                    <h5>Message:</h5>
+                    <input type="text" id="message" required>
+                    <br>
+                    <button class="submit-button">Submit</button>
+                </form>
+            </div>
+            <div class="contact-section">
+                <ul>
+                    <li>
+                        <h2>CONTACT US</h2>
+                    </li>
+                    <li>
+                        <p>
+                            <img src="images/icons/phone.svg" width="28">
+                            082 522 3875
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <img src="images/icons/mail.svg" width="28">
+                            gardens@foster.co.za
+                        </p>
+                    </li>
+                    <li>
+                        <img src="images/icons/map-pin.svg" width="28">
+                        <span>28 Pretoria Road</span>
+                        <br>
+                        <span>Highlands North</span>
+                        <br>
+                        <span>Johannesburg 2192</span>
+                    </li>
+                </ul>
+            </div>
         </main>
+        <div id="imageLightbox" class="image-lightbox">
+            <button id="closeLightbox" class="close-lightbox">
+                &times; Back
+            </button>
+            <img id="enlargedImage" src="" alt="Enlarged portfolio image">
+        </div>
         <!-- JQuery internet website -->
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
         <!---- External JavaScript file included here ----->
