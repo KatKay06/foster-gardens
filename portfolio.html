@@ -143,33 +143,61 @@
                     <button class="submit-button">Submit</button>
                 </form>
             </div>
-            <div class="contact-section">
-                <ul>
-                    <li>
-                        <h2>CONTACT US</h2>
-                    </li>
-                    <li>
-                        <p>
-                            <img src="images/icons/phone.svg" width="28">
-                            082 522 3875
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            <img src="images/icons/mail.svg" width="28">
-                            gardens@foster.co.za
-                        </p>
-                    </li>
-                    <li>
-                        <img src="images/icons/map-pin.svg" width="28">
-                        <span>28 Pretoria Road</span>
-                        <br>
-                        <span>Highlands North</span>
-                        <br>
-                        <span>Johannesburg 2192</span>
-                    </li>
-                </ul>
-            </div>
+           <section class="contact-section">
+                <div class="contact-details">
+                    <h2>CONTACT US</h2>
+                    <ul>
+                        <li>
+                            <p>
+                                <img src="./images/icons/phone.svg" width="28" alt="Phone">
+                                <span>082 522 3875</span>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <img src="./images/icons/mail.svg" width="28" alt="Email">
+                                <span>gardens@foster.co.za</span>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <img src="./images/icons/map-pin.svg" width="28" alt="Location">
+                                <span>
+                                    28 Pretoria Road, <br>
+                                    Highlands North, <br>
+                                    Johannesburg 2192
+                                </span>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="contact-map">
+                    <a 
+                        href="https://www.google.com/maps/search/?api=1&query=28+Pretoria+Road%2C+Highlands+North%2C+Johannesburg+2192"
+                        terget="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Open Foster Gardens location in Google Maps"
+                    >
+                
+                    <iframe 
+                        src="https://maps.google.com/maps?q=28%20Pretoria%20Road%2C%20Highlands%20North%2C%20Johannesburg%202192&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                        width="100%"
+                        height="300"
+                        loading="lazy"
+                        title="Foster Gardens Location"
+                    ></iframe>
+                    </a>
+                    
+                    <a 
+                        href="https://www.google.com/maps/search/?api=1&query=28+Pretoria+Road%2C+Highlands+North%2C+Johannesburg+2192"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="map-link"
+                    >
+                        OPEN IN GOOGLE MAPS
+                    </a>
+                </div>
+            </section>
         </main>
         <div id="imageLightbox" class="image-lightbox">
             <button id="closeLightbox" class="close-lightbox">
