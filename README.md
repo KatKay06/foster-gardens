@@ -15,4 +15,9 @@ Added images and descriptions for services preview.
 Generated a dynamic reviews carousel that automatically slides to the next when viewer is within the section.
 Added 'Get Quote' button to 'choose-us' section for continuous user-prompt and ease of access. 
 Added banner image and adjusted its shape to create a smooth s-curve using svg elements and css styling. 
+Enhanced testimonial carousel transitionss and background colour styling in Index page. 
+Improved responsive portfolio gallery layout. 
+Added interactive portfolio image lightbox. 
+
+
 
