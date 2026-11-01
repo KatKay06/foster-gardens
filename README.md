@@ -18,6 +18,8 @@ Added banner image and adjusted its shape to create a smooth s-curve using svg e
 Enhanced testimonial carousel transitionss and background colour styling in Index page. 
 Improved responsive portfolio gallery layout. 
 Added interactive portfolio image lightbox. 
-
+Integrated an embedded Google maps location into the contact section. 
+Added an external "Open in Google Maps" button to allow visitors to access the business location through google maps. 
+Improved contact information presentation with phone, email and location svg icons. 
 
 
