@@ -1,26 +1,38 @@
 <!DOCTYPE html> 
-<html> 
+<html lang="en"> 
     <head>
-        <link rel="stylesheet" href="css/style.css"> 
+        <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>About Us | Foster Gardens</title>
+        <link rel="stylesheet" href="css/style.css"> 
     </head>    
+
     <body class="about-background">
-        <!--Top icon section for phone and number for ease of access--> 
+
+        <!--Contact details at the top of the page--> 
         <div class="contact-top">
-            <img src="images/icons/mail.svg" width="20"> 
+            <img src="images/icons/mail.svg" width="20" alt=""> 
             <p class="text1">gardens@foster.co.za</p>
-            <img src="images/icons/phone.svg" width="20">
+            <img src="images/icons/phone.svg" width="20" alt="">
             <p class="text2">082 522 3875</p>
         </div> 
+
         <!--Beginning of the menu bar and its selections--> 
            <header>
                 <div class="logo">
                     <a href="index.html">Foster Gardens</a>
                 </div>
-                <button class="burger-menu" aria-label="Open-menu">
+
+                <button 
+                    class="burger-menu" 
+                    type="button"
+                    aria-label="Open navigation menu"
+                    aria-expanded="false"
+                    aria-controls="main-navigation"
+                >
                     ☰
                 </button>
-                <nav class="menu-bar">
+                <nav class="menu-bar" id="main-navigation">
                     <a href="index.html">Home</a>
                     <a href="about.html">About us</a>
                     <a href="services.html">Services</a>
@@ -31,152 +43,314 @@
                     <button class="button-link">GET A QUOTE</button>
                 </a>
             </header>
+
         <main>
-            <div class="about-description">
+        <!-- About Foster Gardens -->
+            <section class="about-description">
                 <h2>ABOUT US</h2>
                 <h3>WE TRANSFORM YOUR LIVING SPACE</h3>
                 <p>
-                    With a wide range of landscaping and gardening services offered by Foster Gardens, we ensure to make use of
+                    With a wide range of landscaping and gardening services offered by Foster Gardens, we ensure that we make use of
                     the highest quality products, skills and machinery to help ensure that your garden remains your personal haven. 
                     The company offers services such as consultations, comprehensive landscape design, installation and garden 
                     maintenance. Additionally, Foster Gardens offers personalised plant consultations and treatment plans for its 
                     customers. Additional services that we provide include:
                 </p>
-            </div>
-            <div class="additional-services">
+            </section>
+
+            <section class="additional-services">
                 <ul>
-                    <li>
-                        Exterior lighting
-                    </li>
-                    <li>
-                        Irrigation Systems
-                    </li>
-                    <li> 
-                        Exterior Lighting
-                    </li>
-                    <li>
-                        Pool design
-                    </li>
+                    <li>Exterior lighting</li>
+                    <li>Irrigation Systems</li>
+                    <li>Paving and cladding</li>
+                    <li>Pool design</li>
                 </ul>
+
                 <div class="tree">
-                    <img src="images/display-and-layout/potted-shrub.png" width="700">
+                    <img 
+                        src="images/display-and-layout/potted-shrub.png"
+                        alt="Decorative potted garden shrub"
+                        width="700"
+                    >
                 </div>
-            </div>
+            </section>
+
+        <!--Why choose us-->
             <div class="choose-us">
                 <h2>WHY CHOOSE US</h2>
-                    <p>
-                        With a wide range of landscaping and gardening services offered by Foster Gardens, we ensure to make use of
-                        the highest quality products, skills and machinery to help ensure that your garden remains your personal haven. 
-                        The company offers services such as consultations, comprehensive landscape design, installation and garden 
-                        maintenance. Additionally, Foster Gardens offers personalised plant consultations and treatment plans for its 
-                        customers. 
-                    </p>
-                </h3>    
-            </div>
-            <div class="history-description">
-                <h2>OUR HISTORY</h2>
+                <h3>About Us</h3>
                 <p>
-                    Our founder John Foster developed a passion for gardening and landscaping 
-                    by working in his grandparents garden. At the young age of 6 years old, Jo would look forward to seeing his 
-                    grandparents, Betty and Jo Snr., so that he could learn more about the skills for nurturing a beautiful garden.
-                    In 1993, he started a small gardening company called "Forever Gardening and Lawns", which is now better known as
-                    Foster Gardens. With over 20 years of experience, Foster Gardens has expanded it's services offeringg to include 
-                    professional-grade landscaping, design and gardening services into the wider Johannesburg and surrounding areas. 
-                    Jo continues to be an active part of the organisation and happily nurturers it's staff and customers with as much
-                    care as he does his gardens - with sincere and loving memory of his grandparents. 
+                    With a wide range of landscaping and gardening services offered by Foster Gardens, we use high-quality
+                    products, skills and machinery to ensure that your garden remains your personal haven. 
+
+
+                    We offer professional <a href="services.html">landscaping and gardening services</a> such as consultations, 
+                    comprehensive landscape design, installation and garden maintenance.
+                    
+                    Learn more about <a href="about.html">our company and our experience</a> or view some of our previous work 
+                    in our <a href="portfolio.html">landscaping portfolio</a>.
                 </p>
-                <img src="images/about-us/grandparents.jpg" width="255">
-            </div>
+                <a href="#contact-link">
+                    <button class="button-link">GET A QUOTE</button>
+                </a>
+            </div> 
+
+        <!--Company history-->
+            <section class="history-description">
+                <h2>OUR HISTORY</h2>
+                <div class="history-content">
+                    <img 
+                        src="images/about-us/grandparents.jpg" 
+                        alt="Photograph representing the founder's grandparents"
+                        width="255"
+                    >
+                    <p>
+                        Our founder John Foster developed a passion for gardening and landscaping by working in his grandparents garden.
+                        At the young age of six, John looked forward to visiting his grandparents, Betty and John Snr., so that he could 
+                        learn more about the skills needed to nurture a beautiful garden. In 1993, he started a small gardening company 
+                        called "Forever Gardening and Lawns", which is now better known as Foster Gardens. 
+                    
+                        With over 20 years of experience, Foster Gardens has expanded it's services offeringg to include professional 
+                        landscaping, design and gardening services throughout Johannesburg and surrounding areas. John continues
+                        to be an active part of the organisation and happily nurtures it's staff and customers with as much care as he does
+                        his gardens, in loving memory of his grandparents. 
+                    </p>
+                </div>
+            </section>
+
+            <!--Testimonial section--> 
+            <section class="reviews" id="reviews">
+                <h2>WHAT OUR CLIENTS HAVE TO SAY</h2>
+                <div class="review-container">   
+                <!--Placement of comments from customers-->
+                    <div class="review-track">
+                        <div class="review">
+                            <h3>★★★★★</h3>
+                            <p>
+                                Amazing service! I absolutely love my garden. 
+                            </p>
+                            <strong>Michelle</strong>
+                        </div>
+                        <div class="review">
+                        <h3>★★★★★</h3>
+                        <p>
+                                Thank you so much for the exceptional service. Foster Garderns made it easy for us to landscape our newly constructed 
+                                property in Randburg. You passionately designed the garden while meeting all our requirements. The installation process
+                                was seamless, and the final result exceeded our expectations.
+                            </p>
+                            <strong>Sarah</strong>
+                        </div>
+
+                        <div class="review">
+                            <h3>★★★★★</h3>
+                            <p>
+                                Professional, efficient and exceeded my expectations.
+                            </p>
+                            <strong>James</strong>
+                        </div>
+
+                        <div class="review">
+                            <h3>★★★★★</h3>
+                            <p>
+                                The fact that we have been using Foster Gardens for almost 10 years is a testament to our satisfaction with the
+                                quality of service offered by Jo and his staff. We recently completed major renovations at our house, and Foster
+                                Gardens quickly restored our gardent to its previous splendor. We would highly recommend Foster Gardens for 
+                                their excellent service. 
+                            </p>
+                            <strong>Michael</strong>
+                        </div>
+                    
+                        <div class="review">
+                            <h3>★★★★★</h3>
+                            <p>
+                                I just wanted to drop you a quick thank you for the gardens at Sunward Park. Without fail. our guests comment on the 
+                                grounds of the guest house and how lovely our garden looks. Your company was efficient through the whole process, and 
+                                now the garden has established and all the gaps are filling in well, it is exactly like we wanted. The different textures 
+                                and colours make such a beautiful guest house. 
+                            </p>
+                            <strong>Maria</strong>
+                        </div>
+                    </div>
+                </div> 
+            <!---- Pagination dots ---->
+                <div class="review-dots"></div>
+            </section>  
               
             <!--This form is essential on each page to enforce and encourage customer response to action calls -->   
-            <div class="quote-box" id="contact-link">
+            <section class="quote-box" id="contact-link">
                 <h2>GET A FREE QUOTE</h2>
                 <!--This form is essential on each page to enforce and encourage customer response to action calls -->
-                <form>
+                <form id="quotation-form">
+                <!--This is the complete/type section-->
                     <div class="side-by-side">
                         <label for="name">First Name</label>
                         <br>
-                        <input type="text" id="name" required>
+                        <input 
+                            type="text" 
+                            id="name" 
+                            name="firstname"
+                            autocomplete="given-name"
+                            required
+                        >
                         <br>
                         <label for="surname">Last name</label>
                         <br>
-                        <input type="text" id="surname" required>
+                        <input 
+                            type="text" 
+                            id="surname"
+                            name="surname"
+                            autocomplete="family-name"
+                            required
+                        >
                     </div>
                     <br>
                     <label for="email">Email Address </label>
                     <br>
-                    <input type="text" id="email" required>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email"
+                            autocomplete="email"
+                            required
+                        >
                     <br>
                     <label for="phone">Phone</label>
                     <br>
-                    <input type="text" id="phone" required>
+                        <input 
+                            type="tel" 
+                            id="phone"
+                            name="phone"
+                            autocomplete="tel"
+                            required
+                        >
                     <br>
-                    <h5>Select your preferred services:</h5>
-                    <label>
-                    <input type="checkbox" value="landscaping">
-                    Landscaping
-                    </label>
-                    <br>
-                    <label>
-                        <input type="checkbox" value="landscaping">
-                        Gardening services
-                    </label>
-                    <div class="frequency-options">
-                        <label> 
-                            <input type="checkbox" id="weekly-checkbox" value="weekly">
-                            Weekly
+                    <!---Beginning of services selection section---->
+                    <fieldset>
+                        <legend>Select your preferred services:</legend>
+                        <label>
+                            <input 
+                                type="checkbox"
+                                name="services"
+                                value="landscaping"
+                            >
+                            Landscaping
                         </label>
                         <br>
                         <label>
-                            <input type="checkbox" id="monthly-checkbox" value="monthly">
-                            Monthly
+                            <input 
+                                type="checkbox"
+                                name="services"
+                                value="gardening"
+                            >
+                            Gardening services
                         </label>
-                    </div>
-                    <label>
-                        <input type="checkbox">
-                        Composting and garden-waste management
-                    </label>
-                    <br>
-                    <label>
-                        <input type="checkbox">
-                        Planting, soil and pest control services 
-                    </label>
-                    <br> 
-                    <label>
-                        <input type="checkbox">
-                        Irrigation and water management services 
-                    </label>
-                    <br>
-                    <label>
-                        <input type="checkbox">
-                        Paving and garden lighting
-                    </label>
-                     <br>
-                    <h5>Message:</h5>
-                    <input type="text" id="message" required>
-                    <br>
-                    <button class="submit-button">Submit</button>
+
+                        <div class="frequency-options">
+                            <p>Preferred gardening frequency:</p>
+                            <label> 
+                                <input 
+                                    type="checkbox" 
+                                    id="weekly-checkbox" 
+                                    value="weekly"
+                                    name="frequency"
+                                >
+                                Weekly
+                            </label>
+                            <br>
+                            <label>
+                                <input 
+                                    type="checkbox" 
+                                    name="frequency"
+                                    id="monthly-checkbox" 
+                                    value="monthly"
+                                >
+                                Monthly
+                            </label>
+                        </div>
+
+                        <label>
+                            <input 
+                                type="checkbox"
+                                name="services"
+                                value="composting"
+                            >
+                            Composting and garden-waste management
+                        </label>
+                        <br>
+
+                        <label>
+                            <input 
+                                type="checkbox"
+                                name="services"
+                                value="planting"
+                            >
+                            Planting, soil and pest control services 
+                        </label>
+                        <br> 
+
+                        <label>
+                            <input 
+                                type="checkbox"
+                                name="services"
+                                value="irrigation"
+                            >
+                            Irrigation and water management services 
+                        </label>
+                        <br>
+
+                        <label>
+                            <input 
+                                type="checkbox"
+                                name="services"
+                                value="paving-lighting"
+                            >
+                            Paving and garden lighting
+                        </label>
+                        <br>
+               
+                        <!--Message/text area-->
+                        <label for="message">Message:</label>
+                        <br>
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="6"
+                            required
+                        ></textarea>
+                        <br>
+                        <button type="submit" class="submit-button">Submit</button>
+                    </fieldset>
                 </form>
-            </div>
+            </section>
+
             <section class="contact-section">
                 <div class="contact-details">
                     <h2>CONTACT US</h2>
                     <ul>
                         <li>
                             <p>
-                                <img src="./images/icons/phone.svg" width="28" alt="Phone">
+                                <img 
+                                    src="./images/icons/phone.svg" 
+                                    width="28" 
+                                    alt="Phone">
                                 <span>082 522 3875</span>
                             </p>
                         </li>
                         <li>
                             <p>
-                                <img src="./images/icons/mail.svg" width="28" alt="Email">
+                                <img 
+                                    src="./images/icons/mail.svg" 
+                                    width="28" 
+                                    alt="Email">
                                 <span>gardens@foster.co.za</span>
                             </p>
                         </li>
                         <li>
                             <p>
-                                <img src="./images/icons/map-pin.svg" width="28" alt="Location">
+                                <img 
+                                    src="./images/icons/map-pin.svg" 
+                                    width="28" 
+                                    alt="Location">
                                 <span>
                                     28 Pretoria Road, <br>
                                     Highlands North, <br>
@@ -187,13 +361,6 @@
                     </ul>
                 </div>
                 <div class="contact-map">
-                    <a 
-                        href="https://www.google.com/maps/search/?api=1&query=28+Pretoria+Road%2C+Highlands+North%2C+Johannesburg+2192"
-                        terget="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="Open Foster Gardens location in Google Maps"
-                    >
-                
                     <iframe 
                         src="https://maps.google.com/maps?q=28%20Pretoria%20Road%2C%20Highlands%20North%2C%20Johannesburg%202192&t=&z=15&ie=UTF8&iwloc=&output=embed"
                         width="100%"
@@ -201,7 +368,6 @@
                         loading="lazy"
                         title="Foster Gardens Location"
                     ></iframe>
-                    </a>
                     
                     <a 
                         href="https://www.google.com/maps/search/?api=1&query=28+Pretoria+Road%2C+Highlands+North%2C+Johannesburg+2192"
@@ -212,11 +378,11 @@
                         OPEN IN GOOGLE MAPS
                     </a>
                 </div>
-            </section>
+            </section> 
         </main>
         <!-- JQuery internet website -->
-        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script defer src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
         <!---- External JavaScript file included here ----->
-        <script src="javascript/scripts.js"></script>          
+        <script defer src="javascript/scripts.js" ></script>     
     </body>
 </html>

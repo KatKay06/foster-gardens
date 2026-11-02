@@ -1,8 +1,10 @@
 <!DOCTYPE html> 
-<html> 
+<html lang="en"> 
     <head>
-        <link rel="stylesheet" href="css/style.css">
+        <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Services | Foster Gardens</title>
+        <link rel="stylesheet" href="css/style.css"> 
     </head>    
     <!--Top icon section for phone and number for ease of access-->   
     <body class="services-background"> 
@@ -18,10 +20,16 @@
                 <div class="logo">
                     <a href="index.html">Foster Gardens</a>
                 </div>
-                <button class="burger-menu" aria-label="Open-menu">
+                <button 
+                    class="burger-menu" 
+                    type="button"
+                    aria-label="Open navigation menu"
+                    aria-expanded="false"
+                    aria-controls="main-navigation"
+                >
                     ☰
                 </button>
-                <nav class="menu-bar">
+                <nav class="menu-bar" id="main-navigation">
                     <a href="index.html">Home</a>
                     <a href="about.html">About us</a>
                     <a href="services.html">Services</a>
@@ -94,94 +102,180 @@
                 </div>
             </div>
             <!--This form is essential on each page to enforce and encourage customer response to action calls -->
-            <div class="quote-box" id="contact-link">
+            <section class="quote-box" id="contact-link">
                 <h2>GET A FREE QUOTE</h2>
                 <!--This form is essential on each page to enforce and encourage customer response to action calls -->
-                <form>
+                <form id="quotation-form">
+                <!--This is the complete/type section-->
                     <div class="side-by-side">
                         <label for="name">First Name</label>
                         <br>
-                        <input type="text" id="name" required>
+                        <input 
+                            type="text" 
+                            id="name" 
+                            name="firstname"
+                            autocomplete="given-name"
+                            required
+                        >
                         <br>
                         <label for="surname">Last name</label>
                         <br>
-                        <input type="text" id="surname" required>
+                        <input 
+                            type="text" 
+                            id="surname"
+                            name="surname"
+                            autocomplete="family-name"
+                            required
+                        >
                     </div>
                     <br>
                     <label for="email">Email Address </label>
                     <br>
-                    <input type="text" id="email" required>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email"
+                            autocomplete="email"
+                            required
+                        >
                     <br>
                     <label for="phone">Phone</label>
                     <br>
-                    <input type="text" id="phone" required>
+                        <input 
+                            type="tel" 
+                            id="phone"
+                            name="phone"
+                            autocomplete="tel"
+                            required
+                        >
                     <br>
-                    <h5>Select your preferred services:</h5>
-                    <label>
-                    <input type="checkbox" value="landscaping">
-                    Landscaping
-                    </label>
-                    <br>
-                    <label>
-                        <input type="checkbox" value="landscaping">
-                        Gardening services
-                    </label>
-                    <div class="frequency-options">
-                        <label> 
-                            <input type="checkbox" id="weekly-checkbox" value="weekly">
-                            Weekly
+                    <!---Beginning of services selection section---->
+                    <fieldset>
+                        <legend>Select your preferred services:</legend>
+                        <label>
+                            <input 
+                                type="checkbox"
+                                name="services"
+                                value="landscaping"
+                            >
+                            Landscaping
                         </label>
                         <br>
                         <label>
-                            <input type="checkbox" id="monthly-checkbox" value="monthly">
-                            Monthly
+                            <input 
+                                type="checkbox"
+                                name="services"
+                                value="gardening"
+                            >
+                            Gardening services
                         </label>
-                    </div>
-                    <label>
-                        <input type="checkbox">
-                        Composting and garden-waste management
-                    </label>
-                    <br>
-                    <label>
-                        <input type="checkbox">
-                        Planting, soil and pest control services 
-                    </label>
-                    <br> 
-                    <label>
-                        <input type="checkbox">
-                        Irrigation and water management services 
-                    </label>
-                    <br>
-                    <label>
-                        <input type="checkbox">
-                        Paving and garden lighting
-                    </label>
-                     <br>
-                    <h5>Message:</h5>
-                    <input type="text" id="message" required>
-                    <br>
-                    <button class="submit-button">Submit</button>
+
+                        <div class="frequency-options">
+                            <p>Preferred gardening frequency:</p>
+                            <label> 
+                                <input 
+                                    type="checkbox" 
+                                    id="weekly-checkbox" 
+                                    value="weekly"
+                                    name="frequency"
+                                >
+                                Weekly
+                            </label>
+                            <br>
+                            <label>
+                                <input 
+                                    type="checkbox" 
+                                    name="frequency"
+                                    id="monthly-checkbox" 
+                                    value="monthly"
+                                >
+                                Monthly
+                            </label>
+                        </div>
+
+                        <label>
+                            <input 
+                                type="checkbox"
+                                name="services"
+                                value="composting"
+                            >
+                            Composting and garden-waste management
+                        </label>
+                        <br>
+
+                        <label>
+                            <input 
+                                type="checkbox"
+                                name="services"
+                                value="planting"
+                            >
+                            Planting, soil and pest control services 
+                        </label>
+                        <br> 
+
+                        <label>
+                            <input 
+                                type="checkbox"
+                                name="services"
+                                value="irrigation"
+                            >
+                            Irrigation and water management services 
+                        </label>
+                        <br>
+
+                        <label>
+                            <input 
+                                type="checkbox"
+                                name="services"
+                                value="paving-lighting"
+                            >
+                            Paving and garden lighting
+                        </label>
+                        <br>
+
+                        <!--Message/text area-->
+                        <label for="message">Message:</label>
+                        <br>
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="6"
+                            required
+                        ></textarea>
+                        <br>
+                        <button type="submit" class="submit-button">Submit</button>
+                    </fieldset>
                 </form>
-            </div>
-           <section class="contact-section">
+            </section>
+
+            <section class="contact-section">
                 <div class="contact-details">
                     <h2>CONTACT US</h2>
                     <ul>
                         <li>
                             <p>
-                                <img src="./images/icons/phone.svg" width="28" alt="Phone">
+                                <img 
+                                    src="./images/icons/phone.svg" 
+                                    width="28" 
+                                    alt="Phone">
                                 <span>082 522 3875</span>
                             </p>
                         </li>
                         <li>
                             <p>
-                                <img src="./images/icons/mail.svg" width="28" alt="Email">
+                                <img 
+                                    src="./images/icons/mail.svg" 
+                                    width="28" 
+                                    alt="Email">
                                 <span>gardens@foster.co.za</span>
                             </p>
                         </li>
                         <li>
                             <p>
-                                <img src="./images/icons/map-pin.svg" width="28" alt="Location">
+                                <img 
+                                    src="./images/icons/map-pin.svg" 
+                                    width="28" 
+                                    alt="Location">
                                 <span>
                                     28 Pretoria Road, <br>
                                     Highlands North, <br>
@@ -192,13 +286,6 @@
                     </ul>
                 </div>
                 <div class="contact-map">
-                    <a 
-                        href="https://www.google.com/maps/search/?api=1&query=28+Pretoria+Road%2C+Highlands+North%2C+Johannesburg+2192"
-                        terget="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="Open Foster Gardens location in Google Maps"
-                    >
-                
                     <iframe 
                         src="https://maps.google.com/maps?q=28%20Pretoria%20Road%2C%20Highlands%20North%2C%20Johannesburg%202192&t=&z=15&ie=UTF8&iwloc=&output=embed"
                         width="100%"
@@ -206,7 +293,6 @@
                         loading="lazy"
                         title="Foster Gardens Location"
                     ></iframe>
-                    </a>
                     
                     <a 
                         href="https://www.google.com/maps/search/?api=1&query=28+Pretoria+Road%2C+Highlands+North%2C+Johannesburg+2192"
@@ -217,11 +303,11 @@
                         OPEN IN GOOGLE MAPS
                     </a>
                 </div>
-            </section>
+            </section> 
         </main>
         <!-- JQuery internet website -->
-        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script defer src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
         <!---- External JavaScript file included here ----->
-        <script src="javascript/scripts.js"></script>  
+        <script defer src="javascript/scripts.js" ></script>     
     </body>
 </html>

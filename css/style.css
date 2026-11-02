@@ -34,7 +34,7 @@ a:link, a:visited {
 }
 
 main { 
-    padding-top:45px;
+    padding-top:35px;
 }
 
 /*===================================
@@ -117,6 +117,10 @@ nav {
     font-size:60%; 
 }
 
+.burger-menu:focus-visible {
+    outline: 3px solid white;
+    outline-offset: 4px;
+}
 /*=========================
 INDEX PAGE -- DEFAULT:PHONE
 ===========================*/
@@ -146,29 +150,30 @@ INDEX PAGE -- DEFAULT:PHONE
     margin:0; 
 }
 
-.secondary-banner { 
-    font-size: 24px;
-    color:#058526;
-    text-align: center;
-}
 /*==============================================
 Setting the background image for the index page
 ================================================*/
 .index-background {
     margin:0;
     font-family: Arial, Helvetica, sans-serif;
-    background-image:url(./images/about-us/leaves1.jpg);
     background-size:100%; 
 }
 
 /*==============================
 Services preview images
 ===============================*/
+.services-preview h3 { 
+    font-size: 24px;
+    color:#058526;
+    text-align: center;
+}
+
 .services-preview { 
     display:flex;
     flex-direction: column;
     position: relative;
     padding-bottom: 20px;
+    background-image:url('../images/about-us/leaves2.jpg');
 }
 
 /*=========================================
@@ -269,6 +274,15 @@ Why choose us section
     margin-top:10px;
 }
 
+.choose-us p a {
+    color: #44d62c; 
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.choose-us p a:hover {
+    color:white;
+}
 /*======================
     Review Section  
 ========================*/
@@ -334,7 +348,7 @@ Why choose us section
     opacity: 0;
     display: block; 
     transform: translateX(100%);
-    transition: transform 0.7 ease, opacity 0.7 ease; 
+    transition: transform 0.7s ease, opacity 0.7s ease; 
 }
 
 .review.active h3, .review.active p, .review.active strong { 
@@ -392,7 +406,7 @@ FOUNDER SECTION
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     word-break: normal;
     text-align:justify;
-    line-height: 1.8;
+    line-height: 1.3;
     box-sizing: border-box;
     margin:0;
     width: 100%;
@@ -566,7 +580,7 @@ CONTACT US SECTION
 SERVICES PAGE - DEFAULT: PHONE
 ============================*/
 .services-background {
-    background-image:url(./images/display-and-layout/wild-shrub.jpg);
+    background-image:url('../images/display-and-layout/wild-shrub.jpg');
     min-height:100%;
     margin:0;
     background-repeat: repeat-x;
@@ -776,7 +790,10 @@ About Us text styles -- heading2
     text-align: left;
     padding-left: 40px;
     color:#44d62c;
+    position:relative; 
+    z-index:2; 
     transform: translateY(70%);
+    margin-bottom: 15px;;
 }
 
 /*==============================
@@ -785,6 +802,9 @@ About US text styles -- heading3
 .about-description h3 { 
     color:#0f5b34; 
     padding-left:40px; 
+    position: relative;
+    z-index: 1;
+    margin-top:0; 
 }
 
 /*================================
@@ -811,7 +831,7 @@ About US text styles -- paragraph
    width:20px; 
    height:20px;
 
-   background-image: url('images/icons/check-icon1.svg');
+   background-image: url('../images/icons/check-icon1.svg');
    background-size: contain;
    background-repeat: no-repeat; 
 }
@@ -847,40 +867,114 @@ About US text styles -- paragraph
 /*=============================
 OUR HISTORY SECTION 
 ===============================*/
-.history-description { 
-    margin: 0 auto;
-    align-items: center;
-    box-sizing: border-box; 
-    display: flex;
+.history-content{
+    display:flex; 
     flex-direction: column;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    justify-content:center; 
+    align-items: center;
+    gap: 20px; 
+    width:100%; 
+    max-width: 650px; 
+    margin: 0 auto; 
+}
+
+.history-description { 
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    width:100%; 
+    padding: 40px 50px 50px; 
+    margin: 0 auto; 
+    box-sizing: border-box;
 }
 
 .history-description h2 {
-    color:#44d62c;
-    text-align: left;
+    color: #0f5b34; 
+    text-align: center;
+    font-weight: 900px;
+    margin-bottom: 25px; 
 }
 
 .history-description p {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
-    text-align: justify;
+    word-break: normal;
+    text-align:justify;
+    line-height: 1.5;
     font-size: small;
-    width:70%; 
-    margin:0 auto;
+    margin:0;
+    width: 100%;
+    max-width: 650px;
 }
 
 .history-description img{  
-    align-items: center;
+    padding:0; 
+    margin: 0 0 20px;
     display: block;
-    object-fit:fill; 
-    padding:10px;
-    width:200px; 
-    height:200px;
+    object-fit:cover;
+    width:170px; 
+    height:170px; 
+    border-radius: 50%;
+}
+
+/*=================================
+SMALL PHONES 
+(MIN WIDTH: >320px) 
+==================================*/
+@media (max-width: 320px) {
+    /*=====================
+    ABOUT US PAGE
+    ======================*/
+    .additional-services{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        width: 100%;
+        margin: 0;
+    }
+    
+    .additional-services ul {
+        margin: 20px 0 0; 
+        display:flex; 
+        flex-direction:column; 
+        align-items: flex-start;
+        gap: 20px; 
+        width:85%; 
+        padding:0; 
+        list-style:none; 
+        transform:none; 
+    }
+
+    .additional-services li {
+        position:relative; 
+        padding-left:30px; 
+        font-size:small; 
+    }
+
+    .tree {
+        display:flex; 
+        justify-content: center;
+        align-items: center;
+        transform:none;
+        width:100%; 
+        flex-shrink:1; 
+    }
+
+    .tree img {
+        display: block;
+        width: 68%;
+        max-width: 280px;
+        height: auto;
+        margin: 0 auto;
+        transform:none; 
+    }
 }
 
 /* ====================
-TABLET - 768px+
+TABLET 
+(MIN-WIDTH: 768px+)
 ========================*/
 @media(min-width: 768px) and (max-width: 1023px) {
     /*===========================
@@ -1101,21 +1195,55 @@ TABLET - 768px+
         transform: translateX(-22%);
     }
 
-    .history-description img{  
-        border-radius:80%;
+    .history-content{
+    display:flex; 
+    flex-direction: row;
+    justify-content:center; 
+    align-items: center;
+    gap:35px; 
+    width:100%; 
+    max-width: 1000px; 
+    margin: 0 auto; 
+}
+
+    .history-description { 
+        display:flex;
+        flex-direction:column;
         align-items: center;
-        display: block;
-        object-fit:fill; 
-        width:300px; 
-        height:300px;
+        justify-content: center;
+        width:100%; 
+        padding: 40px 25px;
+        margin: 0 auto; 
+        box-sizing: border-box;
+    }
+
+    .history-description h2 {
+        color: #0f5b34; 
+        text-align: center;
+        font-weight: 900px;
+        margin-bottom: 25px; 
     }
 
     .history-description p {
         font-family:Verdana, Geneva, Tahoma, sans-serif;
-        text-align: justify;
-        font-size: medium;
-        width:70%; 
-        margin:0 auto;
+        word-break: normal;
+        text-align:justify;
+        line-height: 1.5;
+        font-size: small;
+        box-sizing: border-box;
+        margin:0;
+        width: 70%;
+        max-width: 650px;
+    }
+
+    .history-description img{  
+        padding:0; 
+        margin: 0 0 20px;
+        display: block;
+        object-fit:cover;
+        width:200px; 
+        height:200px; 
+        border-radius:50%; 
     }
     /*========================
     PORTFOLIO PAGE 
@@ -1128,7 +1256,8 @@ TABLET - 768px+
 }
 
 /*======================
-DESKTOP - 1024px+ 
+DESKTOP 
+(MIN-WIDTH: 1024px+) 
 ========================*/
 @media (min-width: 1024px) {
     h2 {
@@ -1402,12 +1531,55 @@ DESKTOP - 1024px+
         transform: translateX(-12%);
     }
 
+    .history-content{
+        display:flex; 
+        flex-direction: row;
+        justify-content:center; 
+        align-items: center;
+        gap:35px; 
+        width:100%; 
+        max-width: 1000px; 
+        margin: 0 auto; 
+    }
+
+    .history-description { 
+        display:flex;
+        flex-direction:column;
+        align-items: center;
+        justify-content: center;
+        width:100%; 
+        padding: 40px 25px;
+        margin: 0 auto; 
+        box-sizing: border-box;
+    }
+
+    .history-description h2 {
+        color: #0f5b34; 
+        text-align: center;
+        font-weight: 900px;
+        margin-bottom: 25px; 
+    }
+
     .history-description p {
         font-family:Verdana, Geneva, Tahoma, sans-serif;
-        text-align: justify;
-        font-size: 14px;
-        width:70%; 
-        margin:0 auto;
+        word-break: normal;
+        text-align:justify;
+        line-height: 1.5;
+        font-size: small;
+        box-sizing: border-box;
+        margin:0;
+        width: 70%;
+        max-width: 650px;
+    }
+
+    .history-description img{  
+        padding:0; 
+        margin: 0 0 20px;
+        display: block;
+        object-fit:cover;
+        width:200px; 
+        height:200px; 
+        border-radius:50%; 
     }
     /*=================
     PORTRAIT PAGE

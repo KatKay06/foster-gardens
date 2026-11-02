@@ -1,42 +1,135 @@
-// Menu-bar section functionality 
-$(document).ready(function () { 
-    // The given media query sizes for the dropdown menu
-    const mobileTablet = window.matchMedia( 
-        "(max-width:1023px)"
-    ); 
 
-    // Open the dropdown menu when the burger is hovered over 
-    $(".burger-menu").on("mouseenter", function () { 
-        // If the screen size is not within the given restriction, do not
-        // continue running the code
+// Mobile navigation functionality
+
+$(document).ready(function () {
+
+    const $menuButton = $('.burger-menu');
+    const $menu = $('.menu-bar');
+
+    // Screen size restriction
+    const mobileTablet = window.matchMedia(
+        '(max-width: 1023px)'
+    );
+
+    // Detect whether the device supports hover
+    const mouseHover = window.matchMedia(
+        '(hover: hover) and (pointer: fine)'
+    );
+
+    // Open menu
+    function openMenu() {
+
+        $menu.stop(true, true).slideDown(200);
+
+        $menuButton.attr('aria-expanded', 'true');
+
+    }
+
+    // Close menu
+    function closeMenu() {
+
+        $menu.stop(true, true).slideUp(200);
+
+        $menuButton.attr('aria-expanded', 'false');
+
+    }
+
+    // Toggle menu
+    function toggleMenu() {
+
+        const isExpanded =
+            $menuButton.attr('aria-expanded') === 'true';
+
+        if (isExpanded) {
+            closeMenu();
+        } else {
+            openMenu();
+        }
+
+    }
+
+    // MOUSE USERS
+    $menuButton.on('mouseenter', function () {
+
+        if (!mobileTablet.matches || !mouseHover.matches) return;
+
+        openMenu();
+
+    });
+
+    // Close menu when mouse leaves the menu area
+    $('header').on('mouseleave', function () {
+
+        if (!mobileTablet.matches || !mouseHover.matches) return;
+
+        closeMenu();
+
+    });
+
+    // TOUCHSCREEN AND KEYBOARD USERS
+    $menuButton.on('click', function () {
+
         if (!mobileTablet.matches) return;
 
-        // If screen size is within given restriction, continue running code
-        $(".menu-bar").stop(true, true).slideDown(200);
-        $(this).attr("aria-expanded", "true");
+        toggleMenu();
+
     });
 
-    // Close the dropdown menu when no longer hovering on burger menu
-    $(".burger-menu, .menu-bar").on("mouseleave", function () {
-        // If the screen size is not within the given restriction, do not 
-        // continue running the code
-        if (!mobileTablet.matches) return; 
+    // Close menu when a navigation link is selected
+    $menu.find('a').on('click', function () {
 
-        // If the screen size is within given restriction, continue running code
-        setTimeout(function () { 
-            if (
-                // If the mouse is not hovering over burger menu and the 
-                // 
-                !$(".burger-menu:hover").length && 
-                !$(".menu-bar:hover").length
-            ) {
-                // If given conditions are true, close the dropdown menu
-                $(".menu-bar").stop(true, true).slideUp(200);
-                $(".burger-menu").attr("aria-expanded", "false");
-            }
-        }, 150);
+        if (mobileTablet.matches) {
+            closeMenu();
+        }
+
     });
-}); 
+
+    // Close menu when clicking or tapping outside the header
+    $(document).on('click', function (event) {
+
+        if (
+            mobileTablet.matches &&
+            !$(event.target).closest('header').length
+        ) {
+
+            closeMenu();
+
+        }
+
+    });
+
+    // Close menu using Escape key
+    $(document).on('keydown', function (event) {
+
+        if (event.key === 'Escape' && mobileTablet.matches) {
+
+            closeMenu();
+
+            $menuButton.trigger('focus');
+
+        }
+
+    });
+
+    // Reset menu when screen size changes
+    $(window).on('resize', function () {
+
+        if (!mobileTablet.matches) {
+
+            $menu.stop(true, true).removeAttr('style');
+
+            $menuButton.attr('aria-expanded', 'false');
+
+        } else {
+
+            closeMenu();
+
+        }
+
+    });
+
+});
+
 
 // Reviews section functionality 
 $(document).ready(function() {
@@ -278,3 +371,28 @@ $(document).ready(function() {
     });
 
 });
+
+// Quotation form validation 
+$(document).ready(function () {
+    $('.quote-box form').on('submit', function (event){
+        const form = this; 
+        
+        // Check required fields
+        if(!form.checkValidity()) {
+            event.preventDefault();
+            form.reportValidity(); 
+            return; 
+        }
+
+        // Check email format
+        const email = $('#email').val().trim(); 
+
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; 
+
+        if(!emailPattern.test(email)) {
+            event.preventDefault();
+            alert('Please enter a valid email address.');
+            return; 
+        }
+    })
+})
