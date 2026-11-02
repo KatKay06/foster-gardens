@@ -27,4 +27,6 @@ Added descriptive alternative text to images to improve accessibility.
 Improved the website's usability across mobile phones, tablets and desktop devices. 
 Refined responsive image positioning and content alignment. 
 Reviewed the implementation of robots.txt in preparation for future deployment using GitHub Pages. 
-
+Included a Contact.html page with functional form, validation and response features.
+Implemented enquiry functionality in the 'Contact us' form (found on every page), contact validation and process response.
+Updated CSS stylesheet for more visual appeal. 
