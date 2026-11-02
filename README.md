@@ -21,5 +21,10 @@ Added interactive portfolio image lightbox.
 Integrated an embedded Google maps location into the contact section. 
 Added an external "Open in Google Maps" button to allow visitors to access the business location through google maps. 
 Improved contact information presentation with phone, email and location svg icons. 
-
+Updated the navigation menu button with accessibility attributes, including aria-expanded and aria-controls. 
+Improved the quotation form by adding appropriate input types, field names and autocomplete attributes. 
+Added descriptive alternative text to images to improve accessibility. 
+Improved the website's usability across mobile phones, tablets and desktop devices. 
+Refined responsive image positioning and content alignment. 
+Reviewed the implementation of robots.txt in preparation for future deployment using GitHub Pages. 
 
