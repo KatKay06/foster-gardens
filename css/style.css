@@ -136,6 +136,7 @@ INDEX PAGE -- DEFAULT:PHONE
     padding: 80px 30px; 
     clip-path: url(#wave-clip); 
     display:flex; 
+    position: relative;
 }
 
 .index-banner h3 { 
@@ -162,8 +163,9 @@ Setting the background image for the index page
 /*==============================
 Services preview images
 ===============================*/
-.services-preview h3 { 
-    font-size: 24px;
+.heading1 { 
+    font-size: 22px;
+    font-weight: bold;
     color:#058526;
     text-align: center;
 }
@@ -172,8 +174,30 @@ Services preview images
     display:flex;
     flex-direction: column;
     position: relative;
+    isolation: isolate;
     padding-bottom: 20px;
-    background-image:url('../images/about-us/leaves2.jpg');
+    width: 100%;
+}
+
+.preview-background {
+    position: relative;
+}
+
+.hero-services{
+    position: relative;
+    isolation: isolate;
+}
+
+.hero-services::before {
+    content:"";
+    position: absolute;
+    inset: 0;
+    background-image: url('../images/about-us/leaves2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.6;
+    z-index: -1;
 }
 
 /*=========================================
@@ -213,7 +237,7 @@ Text styles for each service description
     border-radius: 12px;
 }
 
-.services-preview, .choose-us { 
+.choose-us { 
     position: static;
     width: 100%;
 }
@@ -385,8 +409,8 @@ FOUNDER SECTION
 .founder-image { 
     border-radius:50%; 
     object-fit:cover; 
-    width:200px; 
-    height:200px; 
+    width:150px; 
+    height:150px; 
     padding:0; 
     margin: 0 0 20px;
     display: block;
@@ -461,6 +485,22 @@ FORM AND QUOTATION SECTION
 .quote-box h2{ 
     color:#44d62c;
     margin-left: 30px;
+}
+
+.quote-box h1 {
+    margin-right: 30px;
+    margin-top: 0;
+    margin-left: 30px;
+    justify-content: center;
+    font-size: x-large;
+}
+
+.quote-box p {
+    margin-left: 30px;
+    margin-right: 50px;
+    justify-content: center;
+    font-size: small;
+    font-weight: bold;
 }
 
 .quote-box form{
@@ -576,6 +616,28 @@ CONTACT US SECTION
     color:white;
 }
 
+.form-success {
+    margin: 30px; 
+    padding: 30px; 
+    background-color: white;
+    color:#04773b; 
+    border-radius: 12px; 
+    text-align: center;
+    box-shadow: 2px 5px 6px rgba(0,0,0,0.25);
+}
+
+.form-success h3 {
+    color:#04773b; 
+    margin-bottom: 20px;
+}
+
+.form-success p {
+    line-height: 1.5;
+}
+
+.form-success[hidden] {
+    display:none; 
+}
 /*===========================
 SERVICES PAGE - DEFAULT: PHONE
 ============================*/
@@ -917,6 +979,60 @@ OUR HISTORY SECTION
     border-radius: 50%;
 }
 
+
+/*=================
+CONTACT US PAGE
+==================*/
+.send-message {
+    background-color: #058526;
+    padding-top: 40px; 
+    padding-bottom: 40px; 
+    width: 100%; 
+    color: black;  
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.send-message label {
+    display: inline-block;
+    margin-left: 5px;
+    font: 16px; 
+}
+
+.send-message h2 {
+    color:#06341c;
+    margin-left: 30px;
+}
+
+.send-message form {
+    margin: 30px; 
+}
+
+.send-message input {
+    width:75%;
+    margin-bottom: 10px; 
+}
+
+.send-message textarea {
+    width: 75%;
+    min-height: 130px;
+    margin-bottom: 10px;
+    resize: vertical;
+}
+
+.send-button {
+    background-color: #44d62c;
+    color:white; 
+    cursor: pointer;
+    padding: 9px;
+    border: #069e2d;
+    min-width: 100px;
+    min-height: 100px;
+    font-size: 16px;
+    border-radius: 5px; 
+    border: none;
+    cursor: pointer;
+}
 /*=================================
 SMALL PHONES 
 (MIN WIDTH: >320px) 
@@ -1020,6 +1136,13 @@ TABLET
         background-repeat:none;
     }
 
+    .heading1 { 
+        font-size: 32px;
+        font-weight: bold;
+        color:#058526;
+        justify-content: center;
+    }
+
     .services-preview {
         display: flex;
         flex-direction: column;
@@ -1046,7 +1169,6 @@ TABLET
         padding-top: 200px;
         width: 80%;
         margin: 0 auto;
-        outline: 2px solid blue;
     }
 
     .preview-service1, .preview-service2, .preview-service3 { 
@@ -1055,7 +1177,6 @@ TABLET
         align-items:center;
         width: 100%;
         position: relative;
-        outline: 2px solid red;
     }
 
     /*=====================
@@ -1132,6 +1253,17 @@ TABLET
         line-height: 1.8; 
         text-align:justify;
         margin:0; 
+    }
+
+    /*====================
+    Quote Section 
+    =====================*/
+    .quote-box p {
+        margin-left: 30px;
+        margin-right: 100px;
+        justify-content: center;
+        font-size: small;
+        font-weight: bold;
     }
 
     /*=====================
@@ -1253,6 +1385,27 @@ TABLET
         max-width: 720px;
         margin:auto;  
     }
+
+    /*========================
+    CONTACT US PAGE
+    ========================*/
+    .send-message input {
+        width: 75%;
+    }
+
+    .send-message textarea {
+        width: 85%;
+        min-height: 150px;
+    }
+
+    .send-message label {
+        font-size: medium;
+    }
+
+    .send-button {
+        min-width: 110px;
+        min-height: 46px;
+    }
 }
 
 /*======================
@@ -1373,6 +1526,13 @@ DESKTOP
     /*==============================
     Services offered images
     ===============================*/
+    .heading1 { 
+        font-size: 42px;
+        font-weight: bold;
+        color:#058526;
+        text-align: center;
+    }
+
     .services-preview { 
         flex-direction: row;
         min-height: 200px;
@@ -1409,22 +1569,67 @@ DESKTOP
     /*========================
     Founder description area
     ========================*/
-    .founder-description {
-        display:flex;
-        flex-direction:row;
-        gap:10px;
-        padding-top:40px;
-        padding-bottom:40px;
-        background-color: white;
-        height:450px;
+    /*=========================
+    Founder description section 
+    ===========================*/
+    .founder-description { 
+        width:100%; 
+        max-width: 850px;
+        margin: 0 auto;
+        padding: 35px 25px 45px;
+        box-sizing: border-box;
+        align-items: center;
     }
 
-    .founder-description p { 
-        word-break: normal;
-        text-align:left;
-        line-height: 1.8;
-        padding:30px;
-        font-size: 14px;
+    .header{ 
+        margin-bottom:0 auto 35px;
+    }
+
+    .founder-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 35px;
+        max-width: 100%;
+        width: fit-content;
+        margin: 0 auto;
+    }
+
+    .founder-photo { 
+        display: flex;
+       justify-content: center;
+       align-items: center;
+       flex-shrink: 0;
+    }
+
+    .founder-image {
+        width: 230px;
+        height:230px;
+        margin:0; 
+        object-fit: cover;
+        display: block;
+    }
+
+    .founder-text{
+        width: 350px;
+        max-width: 100%;
+        text-align: left;
+    }
+
+    .founder-text h3, .title {
+        font-size: 21px;
+        font-weight: 700;
+        margin: 0 0 8px; 
+        text-align: left;
+    }
+
+    .founder-text p {
+        width:100%; 
+        font-size: 13px; 
+        line-height: 1.8; 
+        text-align:justify;
+        margin:0; 
     }
 
     /*=====================
@@ -1455,6 +1660,13 @@ DESKTOP
         font-size:large;
     }   
 
+    .quote-box p {
+        margin-left: 30px;
+        margin-right: 100px;
+        justify-content: center;
+        font-size: small;
+        font-weight: bold;
+    }
     /*====================
     Contact us section 
     =====================*/

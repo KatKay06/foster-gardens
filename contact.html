@@ -1,0 +1,206 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact Us | Foster Gardens</title>
+        <link rel="stylesheet" href="css/style.css"> 
+    </head>    
+    <!--Top icon section for phone and number for ease of access-->   
+    <body class="services-background"> 
+        <div class="contact-top">
+            <img src="images/icons/mail.svg" width="20"> 
+            <p class="text1">gardens@foster.co.za</p>
+            <img src="images/icons/phone.svg" width="20">
+            <p class="text2">082 522 3875</p>
+        </div> 
+            <!-- Beginning of the menu bar and its selections --> 
+        <main>
+            <header>
+                <div class="logo">
+                    <a href="index.html">Foster Gardens</a>
+                </div>
+                <button 
+                    class="burger-menu" 
+                    type="button"
+                    aria-label="Open navigation menu"
+                    aria-expanded="false"
+                    aria-controls="main-navigation"
+                >
+                    ☰
+                </button>
+                <nav class="menu-bar" id="main-navigation">
+                    <a href="about.html">About us</a>
+                    <a href="services.html">Services</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="portfolio.html">Portfolio</a>
+                    <a href="contact.html">Contact</a>
+                </nav>
+                <a href="#contact-link">
+                    <button class="button-link">GET A QUOTE</button>
+                </a>
+            </header> 
+        <!--- End of menu bar --->
+            <section class="contact-section">
+                <div class="contact-details">
+                    <ul>
+                        <li>
+                            <p>
+                                <img 
+                                    src="./images/icons/phone.svg" 
+                                    width="28" 
+                                    alt="Phone">
+                                <span>082 522 3875</span>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <img 
+                                    src="./images/icons/mail.svg" 
+                                    width="28" 
+                                    alt="Email">
+                                <span>gardens@foster.co.za</span>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <img 
+                                    src="./images/icons/map-pin.svg" 
+                                    width="28" 
+                                    alt="Location">
+                                <span>
+                                    28 Pretoria Road, <br>
+                                    Highlands North, <br>
+                                    Johannesburg 2192
+                                </span>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="contact-map">
+                    <iframe 
+                        src="https://maps.google.com/maps?q=28%20Pretoria%20Road%2C%20Highlands%20North%2C%20Johannesburg%202192&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                        width="100%"
+                        height="300"
+                        loading="lazy"
+                        title="Foster Gardens Location"
+                    ></iframe>
+                    
+                    <a 
+                        href="https://www.google.com/maps/search/?api=1&query=28+Pretoria+Road%2C+Highlands+North%2C+Johannesburg+2192"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="map-link"
+                    >
+                        OPEN IN GOOGLE MAPS
+                    </a>
+                </div>
+            </section> 
+            <section class="send-message" id="enquiry-link">
+                <h2 id="message-heading">SEND US A MESSAGE</h2>
+                <!--This form is essential on each page to enforce and encourage customer response to action calls -->
+                <form id="message-form">
+                <!--Customer name-->
+                    <label for="contact-name">Full Name</label>
+                    <br>
+                    <input 
+                        type="text" 
+                        id="contact-name" 
+                        name="fullname"
+                        autocomplete="name"
+                        minlength="2"
+                        maxlength="60"
+                        required
+                    >
+                    <br>
+                <!--Email address-->
+                    <label for="contact-email">Email Address </label>
+                    <br>
+                        <input 
+                            type="email" 
+                            id="contact-email" 
+                            name="email"
+                            autocomplete="email"
+                            required
+                        >
+                    <br>
+                <!--Telephone number-->
+                    <label for="contact-phone">Contact number</label>
+                    <br>
+                        <input 
+                            type="tel" 
+                            id="contact-phone"
+                            name="phone"
+                            autocomplete="tel"
+                            pattern="[0-9+()-]{7,20}"
+                            title="Please enter a vlid telephone number"
+                            required
+                        >
+                    <br>
+                    <!--Message category-->
+                    <label for="message-type">Type of Message</label>
+                    <br>
+                    <select
+                        id="message-type"
+                        name="message-type"
+                        required
+                    >
+                        <option value="">Select a message type</option>
+                        <option value="General enquiry">General Enquiry</option>
+                        <option value="Service information">Service Information</option>
+                        <option value="Feedback">Feedback</option>
+                        <option value="Complaint">Complaint</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    <br>
+                    <!--Full message-->
+                    <label for="contact-message">Your Message:</label>
+                    <br>
+                    <textarea
+                        id="contact-message"
+                        name="message"
+                        rows="6"
+                        minlength="10"
+                        maxlength="1000"
+                        placeholder="Please enter your message here..."
+                        required
+                    ></textarea>
+                    <br>
+                    <button type="submit" class="send-button">
+                        Send Message
+                    </button>
+                </form>
+
+                <!--Confirmation message-->
+                <div 
+                    id="message-success"
+                    class="form-success"
+                    role="status"
+                    aria-live="polite"
+                    hidden
+                >
+                    <h3>Thank You!</h3>
+                    <p>
+                        Your message has been prepared successfully. 
+                        Thank you for contacting Foster Gardens. 
+                    </p>
+                    <p>
+                        Please send the prepared email using your email application. 
+                        We look forward to hearing from you. 
+                    </p>
+                    <button
+                        type="button"
+                        id="return-to-message"
+                        class="send-button"
+                    >
+                        Send Another Message 
+                    </button>
+                </div>
+            </section>
+        </main>
+        <!-- JQuery internet website -->
+        <script defer src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <!---- External JavaScript file included here ----->
+        <script defer src="javascript/scripts.js" ></script>     
+    </body>
+</html>

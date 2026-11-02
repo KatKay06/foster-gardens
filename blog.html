@@ -27,11 +27,11 @@
                 ☰
             </button>
             <nav class="menu-bar" id="main-navigation">
-                <a href="index.html">Home</a>
                 <a href="about.html">About us</a>
                 <a href="services.html">Services</a>
                 <a href="blog.html">Blog</a>
                 <a href="portfolio.html">Portfolio</a>  
+                <a href="contact.html">Contact</a>
             </nav>
                 <a href="#contact-link">
                     <button class="button-link">GET A QUOTE</button>
@@ -155,153 +155,194 @@
                     </p>
                 </div>
             </div>
-        </div> 
-        <!--This form is essential on each page to enforce and encourage customer response to action calls -->
+        </div>
+
+        <!---Form section available for users to get easy quotes---->
         <section class="quote-box" id="contact-link">
-                <h2>GET A FREE QUOTE</h2>
-                <!--This form is essential on each page to enforce and encourage customer response to action calls -->
-                <form id="quotation-form">
-                <!--This is the complete/type section-->
-                    <div class="side-by-side">
-                        <label for="name">First Name</label>
-                        <br>
+            <h2 id="quotation-heading">GET A FREE QUOTE</h2>
+            <h1>And Benefit From Our 20+ Years Of LandScaping Experience</h1>
+            <p>
+                We provide our clients with the exceptional service, expertise 
+                and dedication. Each masterpiece created by us guarantees excellence
+                and individuality. 
+            </p>
+            <!--This form is essential on each page to enforce and encourage customer response to action calls -->
+            <form id="quotation-form" action="YOUR_FORM_ENDPOINT" method="POST">
+            <!--This is the complete/type section-->
+                <div class="side-by-side">
+                    <label for="name">First Name</label>
+                    <br>
+                    <input 
+                        type="text" 
+                        id="name" 
+                        name="firstname"
+                        autocomplete="given-name"
+                        minlength="2"
+                        maxlength="50"
+                        required
+                    >
+                    <br>
+                    <label for="surname">Last name</label>
+                    <br>
+                    <input 
+                        type="text" 
+                        id="surname"
+                        name="surname"
+                        autocomplete="family-name"
+                        minlength="2"
+                        maxlength="50"
+                        required
+                    >
+                </div>
+                <br>
+                <label for="email">Email Address </label>
+                <br>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email"
+                        autocomplete="email"
+                        required
+                    >
+                <br>
+                <label for="phone">Phone</label>
+                <br>
+                    <input 
+                        type="tel" 
+                        id="phone"
+                        name="phone"
+                        autocomplete="tel"
+                        pattern="(\+27|0[0-9]{9})"
+                        placeholder="e.g. 08252223875"
+                        title="Enter a valid South African number, e.g. 08252223875"
+                        required
+                    >
+                <br>
+                <!---Beginning of services selection section---->
+                <fieldset>
+                    <legend>Select your preferred services:</legend>
+                    <label>
                         <input 
-                            type="text" 
-                            id="name" 
-                            name="firstname"
-                            autocomplete="given-name"
-                            required
+                            type="checkbox"
+                            name="services"
+                            value="landscaping"
                         >
-                        <br>
-                        <label for="surname">Last name</label>
-                        <br>
+                        Landscaping
+                    </label>
+                    <br>
+                    <label>
                         <input 
-                            type="text" 
-                            id="surname"
-                            name="surname"
-                            autocomplete="family-name"
-                            required
+                            type="checkbox"
+                            name="services"
+                            value="gardening"
                         >
+                        Gardening services
+                    </label>
+
+                    <div class="frequency-options">
+                        <p>Preferred gardening frequency:</p>
+                        <label> 
+                            <input 
+                                type="radio" 
+                                value="weekly"
+                                name="frequency"
+                            >
+                            Weekly
+                        </label>
+                        <br>
+                        <label>
+                            <input 
+                                type="radio" 
+                                name="frequency"
+                                value="monthly"
+                            >
+                            Monthly
+                        </label>
+                        <br>
+                        <label>
+                            <input
+                                type="radio"
+                                name="frquency"
+                                value="once-off"
+                            >
+                            Once-off
+                        </label>
                     </div>
-                    <br>
-                    <label for="email">Email Address </label>
-                    <br>
+
+                    <label>
                         <input 
-                            type="email" 
-                            id="email" 
-                            name="email"
-                            autocomplete="email"
-                            required
+                            type="checkbox"
+                            name="services"
+                            value="composting"
                         >
+                        Composting and garden-waste management
+                    </label>
                     <br>
-                    <label for="phone">Phone</label>
-                    <br>
+
+                    <label>
                         <input 
-                            type="tel" 
-                            id="phone"
-                            name="phone"
-                            autocomplete="tel"
-                            required
+                            type="checkbox"
+                            name="services"
+                            value="planting"
                         >
-                    <br>
-                    <!---Beginning of services selection section---->
-                    <fieldset>
-                        <legend>Select your preferred services:</legend>
-                        <label>
-                            <input 
-                                type="checkbox"
-                                name="services"
-                                value="landscaping"
-                            >
-                            Landscaping
-                        </label>
-                        <br>
-                        <label>
-                            <input 
-                                type="checkbox"
-                                name="services"
-                                value="gardening"
-                            >
-                            Gardening services
-                        </label>
+                        Planting, soil and pest control services 
+                    </label>
+                    <br> 
 
-                        <div class="frequency-options">
-                            <p>Preferred gardening frequency:</p>
-                            <label> 
-                                <input 
-                                    type="checkbox" 
-                                    id="weekly-checkbox" 
-                                    value="weekly"
-                                    name="frequency"
-                                >
-                                Weekly
-                            </label>
-                            <br>
-                            <label>
-                                <input 
-                                    type="checkbox" 
-                                    name="frequency"
-                                    id="monthly-checkbox" 
-                                    value="monthly"
-                                >
-                                Monthly
-                            </label>
-                        </div>
-
-                        <label>
-                            <input 
-                                type="checkbox"
-                                name="services"
-                                value="composting"
-                            >
-                            Composting and garden-waste management
-                        </label>
-                        <br>
-
-                        <label>
-                            <input 
-                                type="checkbox"
-                                name="services"
-                                value="planting"
-                            >
-                            Planting, soil and pest control services 
-                        </label>
-                        <br> 
-
-                        <label>
-                            <input 
+                    <label>
+                        <input 
                                 type="checkbox"
                                 name="services"
                                 value="irrigation"
-                            >
-                            Irrigation and water management services 
-                        </label>
-                        <br>
+                        >
+                        Irrigation and water management services 
+                    </label>
+                    <br>
 
-                        <label>
-                            <input 
-                                type="checkbox"
-                                name="services"
-                                value="paving-lighting"
-                            >
-                            Paving and garden lighting
-                        </label>
+                    <label>
+                        <input 
+                            type="checkbox"
+                            name="services"
+                            value="paving-lighting"
+                        >
+                        Paving and garden lighting
+                    </label>
                         <br>
-               
-                        <!--Message/text area-->
-                        <label for="message">Message:</label>
-                        <br>
-                        <textarea
-                            id="message"
-                            name="message"
-                            rows="6"
-                            required
-                        ></textarea>
-                        <br>
-                        <button type="submit" class="submit-button">Submit</button>
-                    </fieldset>
-                </form>
-            </section>
+                        
+                    <!--Additional information-->
+                    <label for="message">Tell us more about your requirements</label>
+                    <br>
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="6"
+                        minlength="10"
+                        maxlength="1000"
+                        placeholder="Describe your gardening or landscaping requirements..."
+                        required
+                    ></textarea>
+                    <br>
+                    <!--Submission feedback-->
+                    <div id="quotation-feedback" role="status" aria-live="polite"></div>
+                    <button type="submit" class="submit-button">Submit Enquiry</button>
+                </fieldset>
+            </form>
+            <!--Enquiry confirmation message-->
+            <div id="quotation-success" class="form-success" role="status" aria-live="polite" hidden>
+                <h3>Thank You for Your Enquiry!</h3>
+                <p>
+                    Your enquiry has been recieved successfully. 
+                    Foster Gardens appreciates your interest in our services. 
+                </p>
+                <p>
+                    We will review your selected services and contact you with 
+                    a personalised quotation. 
+                </p>
+                <button type="button" id="return-to-form" class="submit-button">
+                    Submit Another Enquiry
+                </button>
+            </div>
+        </section>
 
             <section class="contact-section">
                 <div class="contact-details">

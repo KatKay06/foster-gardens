@@ -27,12 +27,11 @@
                     ☰
                 </button>
                 <nav class="menu-bar" id="main-navigation">
-                    <a href="index.html">Home</a>
                     <a href="about.html">About us</a>
                     <a href="services.html">Services</a>
                     <a href="blog.html">Blog</a>
                     <a href="portfolio.html">Portfolio</a>
-                    
+                    <a href="contact.html">Contact</a>
                 </nav>
                 <a href="#contact-link">
                         <button class="button-link">GET A QUOTE</button>
@@ -78,11 +77,17 @@
                     <img src="images/portfolio/yard-portfolio6.jpg" alt="garden project">
                 </a>
             </div>
-            <!---Form section available for users to get easy quotes---->
+                    <!---Form section available for users to get easy quotes---->
             <section class="quote-box" id="contact-link">
-                <h2>GET A FREE QUOTE</h2>
+                <h2 id="quotation-heading">GET A FREE QUOTE</h2>
+                <h1>And Benefit From Our 20+ Years Of LandScaping Experience</h1>
+                <p>
+                    We provide our clients with the exceptional service, expertise 
+                    and dedication. Each masterpiece created by us guarantees excellence
+                    and individuality. 
+                </p>
                 <!--This form is essential on each page to enforce and encourage customer response to action calls -->
-                <form id="quotation-form">
+                <form id="quotation-form" action="YOUR_FORM_ENDPOINT" method="POST">
                 <!--This is the complete/type section-->
                     <div class="side-by-side">
                         <label for="name">First Name</label>
@@ -92,6 +97,8 @@
                             id="name" 
                             name="firstname"
                             autocomplete="given-name"
+                            minlength="2"
+                            maxlength="50"
                             required
                         >
                         <br>
@@ -102,6 +109,8 @@
                             id="surname"
                             name="surname"
                             autocomplete="family-name"
+                            minlength="2"
+                            maxlength="50"
                             required
                         >
                     </div>
@@ -123,6 +132,9 @@
                             id="phone"
                             name="phone"
                             autocomplete="tel"
+                            pattern="(\+27|0[0-9]{9})"
+                            placeholder="e.g. 08252223875"
+                            title="Enter a valid South African number, e.g. 08252223875"
                             required
                         >
                     <br>
@@ -151,8 +163,7 @@
                             <p>Preferred gardening frequency:</p>
                             <label> 
                                 <input 
-                                    type="checkbox" 
-                                    id="weekly-checkbox" 
+                                    type="radio" 
                                     value="weekly"
                                     name="frequency"
                                 >
@@ -161,12 +172,20 @@
                             <br>
                             <label>
                                 <input 
-                                    type="checkbox" 
+                                    type="radio" 
                                     name="frequency"
-                                    id="monthly-checkbox" 
                                     value="monthly"
                                 >
                                 Monthly
+                            </label>
+                            <br>
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="frquency"
+                                    value="once-off"
+                                >
+                                Once-off
                             </label>
                         </div>
 
@@ -209,20 +228,40 @@
                             Paving and garden lighting
                         </label>
                         <br>
-                
-                        <!--Message/text area-->
-                        <label for="message">Message:</label>
+                        
+                        <!--Additional information-->
+                        <label for="message">Tell us more about your requirements</label>
                         <br>
                         <textarea
                             id="message"
                             name="message"
                             rows="6"
+                            minlength="10"
+                            maxlength="1000"
+                            placeholder="Describe your gardening or landscaping requirements..."
                             required
                         ></textarea>
                         <br>
-                        <button type="submit" class="submit-button">Submit</button>
+                    <!--Submission feedback-->
+                        <div id="quotation-feedback" role="status" aria-live="polite"></div>
+                        <button type="submit" class="submit-button">Submit Enquiry</button>
                     </fieldset>
                 </form>
+            <!--Enquiry confirmation message-->
+                <div id="quotation-success" class="form-success" role="status" aria-live="polite" hidden>
+                    <h3>Thank You for Your Enquiry!</h3>
+                    <p>
+                        Your enquiry has been recieved successfully. 
+                        Foster Gardens appreciates your interest in our services. 
+                    </p>
+                    <p>
+                        We will review your selected services and contact you with 
+                        a personalised quotation. 
+                    </p>
+                    <button type="button" id="return-to-form" class="submit-button">
+                        Submit Another Enquiry
+                    </button>
+                </div>
             </section>
 
             <section class="contact-section">

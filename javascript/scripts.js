@@ -317,7 +317,6 @@ $(document).ready(function() {
 });
 
 // Portfolio gallery functionality 
-
 $(document).ready(function() {
 
     // Open enlarged image
@@ -396,3 +395,163 @@ $(document).ready(function () {
         }
     })
 })
+
+// Quotation / Enquiry Form Validation
+
+$(document).ready(function () {
+
+    const $quotationForm = $('#quotation-form');
+    const $successMessage = $('#quotation-success');
+    const $quotationHeading = $('#quotation-heading');
+
+    $quotationForm.on('submit', function (event) {
+
+        event.preventDefault();
+
+        const form = this;
+
+        // HTML5 validation
+        if (!form.checkValidity()) {
+            form.reportValidity();
+            return;
+        }
+
+        // Check service selection
+        const selectedServices =
+            $('input[name="services"]:checked');
+
+        if (selectedServices.length === 0) {
+            alert('Please select at least one preferred service.');
+            return;
+        }
+
+        // Validate telephone number
+        const phone = $('#phone').val().trim();
+
+        const phonePattern = /^[0-9+\s()-]{7,20}$/;
+
+        if (!phonePattern.test(phone)) {
+            alert('Please enter a valid telephone number.');
+            $('#phone').trigger('focus');
+            return;
+        }
+
+        // Collect customer name
+        const firstName = $('#name').val().trim();
+
+        // Personalise confirmation message
+        $successMessage.find('h3').text(
+            'Thank You, ' + firstName + '!'
+        );
+
+        // Hide heading and form
+        $quotationHeading.hide();
+        $quotationForm.hide();
+
+        // Display confirmation
+        $successMessage.prop('hidden', false);
+
+    });
+
+    // Return to enquiry form
+    $('#return-to-form').on('click', function () {
+
+        $quotationForm[0].reset();
+
+        $successMessage.prop('hidden', true);
+
+        $quotationHeading.show();
+        $quotationForm.show();
+
+        // Return focus to first input
+        $('#name').trigger('focus');
+
+    });
+
+});
+
+
+// General Contact Form Validation and Email Preparation
+
+$(document).ready(function () {
+
+    const $messageForm = $('#message-form');
+    const $successMessage = $('#message-success');
+    const $messageHeading = $('#message-heading');
+
+    $messageForm.on('submit', function (event) {
+
+        event.preventDefault();
+
+        const form = this;
+
+        // Check HTML5 validation
+        if (!form.checkValidity()) {
+            form.reportValidity();
+            return;
+        }
+
+        // Collect customer information
+        const name = $('#contact-name').val().trim();
+        const email = $('#contact-email').val().trim();
+        const phone = $('#contact-phone').val().trim();
+        const messageType = $('#message-type').val();
+        const message = $('#contact-message').val().trim();
+
+        // Validate telephone number
+        const phonePattern = /^[0-9+()\s-]{7,20}$/;
+
+        if (!phonePattern.test(phone)) {
+            alert('Please enter a valid telephone number.');
+            $('#contact-phone').trigger('focus');
+            return;
+        }
+
+        // Prepare email subject
+        const subject = messageType + ' - Foster Gardens';
+
+        // Compile email content
+        const emailBody =
+            'Name: ' + name + '\n\n' +
+            'Email Address: ' + email + '\n\n' +
+            'Contact Number: ' + phone + '\n\n' +
+            'Message Type: ' + messageType + '\n\n' +
+            'Message:\n' + message;
+
+        // Construct mailto link
+        const mailtoLink =
+            'mailto:gardens@foster.co.za' +
+            '?subject=' + encodeURIComponent(subject) +
+            '&body=' + encodeURIComponent(emailBody);
+
+        // Prepare the email
+        window.location.href = mailtoLink;
+
+        // Display instructions for completing the email
+        $successMessage.find('h3').text(
+        'Thank You, ' + name + '!'
+        );
+
+        $messageHeading.hide();
+        $messageForm.hide();
+
+        $successMessage.prop('hidden', false);
+
+    });
+
+    // Return to contact form
+    $('#return-to-message').on('click', function () {
+
+        $messageForm[0].reset();
+
+        $successMessage.prop('hidden', true);
+
+        $messageHeading.show();
+        $messageForm.show();
+
+        // Return focus to first input
+        $('#contact-name').trigger('focus');
+
+    });
+
+});
